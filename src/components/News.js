@@ -1,7 +1,8 @@
 // ./src/components/News.js
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import './../styles/App.css';
+
+// <img src={logo} className="News-logo" alt="logo" />
 
 
 class News extends Component {
@@ -9,7 +10,6 @@ class News extends Component {
     return (
       <div className="News">
         <div className="News-header">
-          <img src={logo} className="News-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
         <p className="News-intro">

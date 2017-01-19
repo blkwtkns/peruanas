@@ -25,7 +25,7 @@ class Main extends Component {
                         </div>
                     </div>
                 </nav>
-                <div className="container">
+                <div className="container-fluid">
                     {this.props.children}
                 </div>
             </div>

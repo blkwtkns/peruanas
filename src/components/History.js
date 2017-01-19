@@ -1,15 +1,14 @@
 // ./src/components/History.js
 import React, { Component } from 'react';
-import logo from '../logo.svg';
 import './../styles/App.css';
 
+// <img src={logo} className="History-logo" alt="logo" />
 
 class History extends Component {
   render() {
     return (
       <div className="History">
         <div className="History-header">
-          <img src={logo} className="History-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
         <p className="History-intro">

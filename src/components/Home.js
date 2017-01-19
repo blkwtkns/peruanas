@@ -4,9 +4,9 @@ import './../styles/Home.css';
 
 
 const Home = () => (
-  <div className="jumbotron">
+  <div className="jumbotron home">
     <div className="container">  
-      <div className="main home">
+      <div className="main">
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Link, browserHistory } from 'react-router'
-// import App from './components/App';
+
 import Main from './components/Main'
 import About from './components/About'
 import History from './components/History'

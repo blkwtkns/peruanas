@@ -1,7 +1,8 @@
 .about {
   background: no-repeat center/100% url('../assets/machu-picchu-travel.jpg');
-  opacity: .8;
-  text-align: center;
-
-  height: 80%;
+  height: 40rem;
 };
+
+.main {
+  text-align: center;
+}

@@ -6,11 +6,7 @@ text-decoration: none;
   height: 3rem;
 }
 
-.navbar-brand {
-  margin-left: 5%;
+.navbar-default .navbar-brand {
   color: red;
-  font-size: 2em;
-  text-decoration: none;
 }
-
 
