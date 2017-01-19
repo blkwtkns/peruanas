@@ -6,6 +6,7 @@ import Main from './components/Main'
 import About from './components/About'
 import History from './components/History'
 import Dances from './components/Dances'
+import Dancers from './components/Dancers'
 import Photos from './components/Photos'
 import News from './components/News'
 import Home from './components/Home'
@@ -18,6 +19,7 @@ ReactDOM.render((
       <Route path="/history" component={History}/>
       <Route path="/about" component={About} />
       <Route path="/dances" component={Dances}/>
+      <Route path="/dancers" component={Dancers}/>
       <Route path="/photos" component={Photos}/>
       <Route path="/news" component={News}/>
     </Route>

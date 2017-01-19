@@ -1,0 +1,16 @@
+a {
+text-decoration: none;
+}
+
+.navbar-header {
+  height: 3rem;
+}
+
+.navbar-brand {
+  margin-left: 5%;
+  color: red;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+

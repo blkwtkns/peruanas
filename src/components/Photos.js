@@ -1,14 +1,15 @@
+// ./src/components/Photos.js
 import React, { Component } from 'react';
 import logo from '../logo.svg';
 import './../styles/App.css';
 
 
+// <img src={logo} className="Photos-logo" alt="logo" />
 class Photos extends Component {
   render() {
     return (
       <div className="Photos">
         <div className="Photos-header">
-          <img src={logo} className="Photos-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
         <p className="Photos-intro">

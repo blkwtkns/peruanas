@@ -1,6 +1,7 @@
-// ./src/components/navbar.js
+// ./src/components/Main.js
 import React, {Component} from 'react';
 import { Link } from 'react-router';
+import './../styles/Main.css'
 
 class Main extends Component {
     render(){
@@ -13,7 +14,7 @@ class Main extends Component {
                         </div>
                         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul className="nav navbar-nav">
-          <li><Link to="/">Home</Link></li>
+                                <li><Link to="/">Home</Link></li>
                                 <li><Link to="/history">History</Link></li>
                                 <li><Link to="/about">About</Link></li>
                                 <li><Link to="/dances">Dances</Link></li>
