@@ -16,12 +16,12 @@ ReactDOM.render((
   <Router history={browserHistory}>
     <Route component={Main}>
       <Route path="/" component={Home}/>
-      <Route path="/history" component={History}/>
-      <Route path="/about" component={About} />
-      <Route path="/dances" component={Dances}/>
-      <Route path="/dancers" component={Dancers}/>
-      <Route path="/photos" component={Photos}/>
-      <Route path="/news" component={News}/>
+      <Route path="history" component={History}/>
+      <Route path="about" component={About} />
+      <Route path="dances" component={Dances}/>
+      <Route path="dancers" component={Dancers}/>
+      <Route path="photos" component={Photos}/>
+      <Route path="news" component={News}/>
     </Route>
   </Router>
 ), document.getElementById('root')
