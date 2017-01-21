@@ -1,12 +1,36 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
 a {
-text-decoration: none;
+  text-decoration: none;
 }
 
 .navbar-header {
-  height: 3rem;
+  background-color: red;
+  float: none;
+  height: 5rem;
+  text-align: center;
+}
+
+.navbar-brand {
+  float: none;
+  margin: 0 auto;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
 }
 
 .navbar-default .navbar-brand {
-  color: red;
+  color: #ffffff;
 }
 
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}

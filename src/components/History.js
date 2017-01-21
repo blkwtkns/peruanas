@@ -1,5 +1,5 @@
 // ./src/components/History.js
-import React, { Component } from 'react';
+import React from 'react';
 import './../styles/History.css';
 
 // <img src={logo} className="History-logo" alt="logo" />
