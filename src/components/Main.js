@@ -9,6 +9,7 @@ import {
   Nav,
   NavDropdown
 } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import {
   Link
 } from 'react-router';
@@ -17,42 +18,43 @@ import './../styles/Main.css'
 class Main extends Component {
   render() {
     return (
-      <div>
-        <Navbar collapseOnSelect>
+      <section>
+        <Navbar collapseOnSelect fluid fixedTop>
           <Navbar.Header>
             <Navbar.Brand><Link to="/">RaicesPeruanas</Link></Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
             <Nav pullLeft>
-              <NavItem eventKey={1} href="#"><Link to="/">Home</Link></NavItem>
-              <NavItem eventKey={2} href="#"><Link to="history">History</Link></NavItem>
-              <NavItem eventKey={3} href="#"><Link to="about">About</Link></NavItem>
-              <NavItem eventKey={4} href="#"><Link to="dances">Dances</Link></NavItem>
-              <NavItem eventKey={5} href="#"><Link to="photos">Photos</Link></NavItem>
-              <NavItem eventKey={6} href="#"><Link to="news">News</Link></NavItem>
-              <NavItem eventKey={7} href="#"><Link to="dancers">Dancers</Link></NavItem>
+              <LinkContainer to="/"><NavItem eventKey={1} href="#">Home</NavItem></LinkContainer>
+              <LinkContainer to="history"><NavItem eventKey={2} href="#">History</NavItem></LinkContainer>
+              <LinkContainer to="about"><NavItem eventKey={3} href="#">About</NavItem></LinkContainer>
+              <LinkContainer to="dances"><NavItem eventKey={4} href="#">Dances</NavItem></LinkContainer>
+              <LinkContainer to="photos"><NavItem eventKey={5} href="#">Photos</NavItem></LinkContainer>
+              <LinkContainer to="news"><NavItem eventKey={6} href="#">News</NavItem></LinkContainer>
+              <LinkContainer to="dancers"><NavItem eventKey={7} href="#">Dancers</NavItem></LinkContainer>
             </Nav>
             <Nav pullRight>
               <NavItem eventKey={1} href="#">Contact</NavItem>
               <NavDropdown eventKey={2} title="Menu" id="basic-nav-dropdown">
-                <MenuItem eventKey={2.1}><Link to="/">Home</Link></MenuItem>
-                <MenuItem eventKey={2.2}><Link to="history">History</Link></MenuItem>
-                <MenuItem eventKey={2.3}><Link to="about">About</Link></MenuItem>
-                <MenuItem eventKey={2.4}><Link to="dances">Dances</Link></MenuItem>
-                <MenuItem eventKey={2.5}><Link to="photos">Photos</Link></MenuItem>
-                <MenuItem eventKey={2.6}><Link to="news">News</Link></MenuItem>
-                <MenuItem eventKey={2.7}><Link to="dancers">Dancers</Link></MenuItem>
+                <LinkContainer to="/"><MenuItem eventKey={2.1}>Home</MenuItem></LinkContainer>
+                <LinkContainer to="history"><MenuItem eventKey={2.2}>History</MenuItem></LinkContainer>
+                <LinkContainer to="about"><MenuItem eventKey={2.3}>About</MenuItem></LinkContainer>
+
+                <LinkContainer to="dances"><MenuItem eventKey={2.4}>Dances</MenuItem></LinkContainer>
+                <LinkContainer to="photos"><MenuItem eventKey={2.5}>Photos</MenuItem></LinkContainer>
+                <LinkContainer to="news"><MenuItem eventKey={2.6}>News</MenuItem></LinkContainer>
+                <LinkContainer to="dancers"><MenuItem eventKey={2.7}>Dancers</MenuItem></LinkContainer>
                 <MenuItem divider />
                 <MenuItem eventKey={2.8}>Contact</MenuItem>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-        <div className="container-fluid">
+        <section className="container-fluid">
           {this.props.children}
-        </div>
-      </div>
+        </section>
+      </section>
     )
   }
 }
