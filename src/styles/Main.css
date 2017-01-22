@@ -7,30 +7,17 @@ a {
 .navbar-header {
   background-color: red;
   float: none;
-  height: 5rem;
-  text-align: center;
-}
-
-.navbar-brand {
-  float: none;
-  margin: 0 auto;
-  display: block;
   font-family: 'Open Sans', sans-serif;
-  font-size: 2em;
 }
 
-.navbar-default .navbar-brand {
+.navbar-header .navbar-left > li > a {
+  font-size: medium;
   color: #ffffff;
 }
 
-.navbar-nav {
-    float:none;
-    margin:0 auto;
-    display: block;
-    text-align: center;
+.socials {
+  display: block;
+  margin: 0 auto;
+  color: #ffffff;
 }
 
-.navbar-nav > li {
-    display: inline-block;
-    float:none;
-}
