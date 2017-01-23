@@ -1,22 +1,16 @@
 // ./src/components/Dancers.js
-import React, { Component } from 'react';
-import './../styles/App.css';
+import React from 'react';
+import { Jumbotron } from 'react-bootstrap';
+import DancersCarousel from './carousels/DancersCarousel';
+import './../styles/Dancers.css';
 
-// <img src={logo} className="Dancers-logo" alt="logo" />
 
-class Dancers extends Component {
-  render() {
-    return (
-      <div className="Dancers">
-        <div className="Dancers-header">
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="Dancers-intro">
-          To get started, edit <code>src/Dancers.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const Dancers = () => (
+
+  <Jumbotron className="Dancers">
+    <DancersCarousel />
+  </Jumbotron>
+      
+);
 
 export default Dancers;

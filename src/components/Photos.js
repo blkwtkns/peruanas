@@ -1,22 +1,16 @@
 // ./src/components/Photos.js
-import React, { Component } from 'react';
-import './../styles/App.css';
+import React from 'react';
+import { Jumbotron } from 'react-bootstrap';
+import PhotosCarousel from './carousels/PhotosCarousel';
+import './../styles/Photos.css';
 
 
-// <img src={logo} className="Photos-logo" alt="logo" />
-class Photos extends Component {
-  render() {
-    return (
-      <div className="Photos">
-        <div className="Photos-header">
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="Photos-intro">
-          To get started, edit <code>src/Photos.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const Photos = () => (
+
+  <Jumbotron className="Dancers">
+    <PhotosCarousel />
+  </Jumbotron>
+      
+);
 
 export default Photos;

@@ -1,22 +1,14 @@
 // ./src/components/Dances.js
-import React, { Component } from 'react';
-import './../styles/App.css';
+import React from 'react';
+import { Jumbotron, ResponsiveEmbed } from 'react-bootstrap';
+import './../styles/Dances.css';
 
-// <img src={logo} className="Dances-logo" alt="logo" />
-
-class Dances extends Component {
-  render() {
-    return (
-      <div className="Dances">
-        <div className="Dances-header">
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="Dances-intro">
-          To get started, edit <code>src/Dances.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const Dances = () => (
+  <Jumbotron className="dances">
+    <ResponsiveEmbed a16by9>
+      <iframe src="http://www.youtube.com/embed/?listType=user_uploads&list=RaicesPeruanas"></iframe>
+    </ResponsiveEmbed>
+  </Jumbotron>
+);
 
 export default Dances;

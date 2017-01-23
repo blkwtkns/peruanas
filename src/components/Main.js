@@ -42,20 +42,20 @@ class Main extends Component {
             </Nav> */}
             <Nav pullRight>
               <LinkContainer to="/"><NavItem eventKey={1} href="#" >Home</NavItem></LinkContainer>
-              <LinkContainer to="history"><NavItem eventKey={2} href="#">History</NavItem></LinkContainer>
+              <LinkContainer to="news"><NavItem eventKey={2} href="#">News</NavItem></LinkContainer>
               <LinkContainer to="dances"><NavItem eventKey={3} href="#">Dances</NavItem></LinkContainer>
               <LinkContainer to="photos"><NavItem eventKey={4} href="#">Photos</NavItem></LinkContainer>
-              <LinkContainer to="news"><NavItem eventKey={5} href="#">News</NavItem></LinkContainer>
+              <LinkContainer to="history"><NavItem eventKey={5} href="#">History</NavItem></LinkContainer>
               <LinkContainer to="dancers"><NavItem eventKey={6} href="#">Dancers</NavItem></LinkContainer>
               {/*<LinkContainer to="contact"><NavItem eventKey={7} href="#">Contact</NavItem></LinkContainer>*/}
               <NavDropdown eventKey={7} title="Menu" id="basic-nav-dropdown">
                 <LinkContainer to="/"><MenuItem eventKey={7.1}>Home</MenuItem></LinkContainer>
-                <LinkContainer to="history"><MenuItem eventKey={7.2}>History</MenuItem></LinkContainer>
+                <LinkContainer to="news"><MenuItem eventKey={7.2}>News</MenuItem></LinkContainer>
                 <LinkContainer to="about"><MenuItem eventKey={7.3}>About</MenuItem></LinkContainer>
 
                 <LinkContainer to="dances"><MenuItem eventKey={7.4}>Dances</MenuItem></LinkContainer>
                 <LinkContainer to="photos"><MenuItem eventKey={7.5}>Photos</MenuItem></LinkContainer>
-                <LinkContainer to="news"><MenuItem eventKey={7.6}>News</MenuItem></LinkContainer>
+                <LinkContainer to="history"><MenuItem eventKey={7.6}>History</MenuItem></LinkContainer>
                 <LinkContainer to="dancers"><MenuItem eventKey={7.7}>Dancers</MenuItem></LinkContainer>
                 <MenuItem divider />
                 <MenuItem eventKey={7.8}>Contact</MenuItem>

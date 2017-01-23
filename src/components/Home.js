@@ -2,9 +2,8 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
 import './../styles/Home.css';
-// import homeImg from '../assets/dancers-gaze.jpg';
 import About from './About';
-import HomeCarousel from './HomeCarousel';
+import HomeCarousel from './carousels/HomeCarousel';
 
 
 const Home = () => (

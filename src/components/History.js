@@ -1,13 +1,16 @@
 // ./src/components/History.js
 import React from 'react';
+import { Jumbotron } from 'react-bootstrap';
+import HistCarousel from './carousels/HistCarousel';
 import './../styles/History.css';
 
 
-const History = () => {
+const History = () => (
 
-  return (
     <section className="historySection">
-    <div className="jumbotron history"></div>
+    <Jumbotron className="History"> 
+      <HistCarousel />
+    </Jumbotron>
     <div className="supporting">
       <div className="containter-fluid">
         <div className="main">
@@ -26,7 +29,6 @@ const History = () => {
       </div>
     </div>
     </section>
-  );
-};
+);
 
 export default History;

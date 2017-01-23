@@ -1,4 +1,4 @@
-.HomeCarousel {
+.PhotosCarousel {
   margin-top: 3rem;
 }
 
@@ -13,10 +13,3 @@
     height: 400px;
   } 
 }
-
-/* @media only screen and (min-width: 768px) {
- *   .raicesLogo {
- *     width: 2.5em; 
- *     height: 2.5em;
- *   }
- * } */
