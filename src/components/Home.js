@@ -1,15 +1,19 @@
 // ./src/components/Home.js
 import React from 'react';
+import { Jumbotron } from 'react-bootstrap';
 import './../styles/Home.css';
+// import homeImg from '../assets/dancers-gaze.jpg';
+import About from './About';
+import HomeCarousel from './HomeCarousel';
 
 
 const Home = () => (
-  <div className="jumbotron home">
-    <div className="container">  
-      <div className="main">
-      </div>
-    </div>
-  </div>
-)
+  <section>
+    <Jumbotron className="home">
+      <HomeCarousel />
+    </Jumbotron>
+    <About />
+  </section>
+);
 
 export default Home;

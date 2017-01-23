@@ -1,6 +1,6 @@
 // ./src/components/Main.js
 import React, {
-  Component
+  Component 
 } from 'react';
 import {
   Image,
@@ -15,36 +15,34 @@ import { LinkContainer } from 'react-router-bootstrap';
   // Link
 // } from 'react-router';
 import './../styles/Main.css';
-import logo from './../assets/image1-small-23.png';
+import logo from './../assets/image1-small-23.png'; 
 
 class Main extends Component {
   render() {
     return (
       <section>
-        <Navbar collapseOnSelect fluid fixedTop>
+        <Navbar fluid fixedTop>
           <Navbar.Header>
-            {/*<Navbar.Brand>*/}
-              <Nav pullLeft className="infos">
-                <NavItem eventKey={1} href="#"><Image src={logo} height="25" width="25" responsive circle/></NavItem>
-                <NavItem eventKey={2} href="#"><i className="fa fa-phone" aria-hidden="true"></i> Call 1(333)333-3333</NavItem>
-                <NavItem eventKey={3} href="#"><i className="fa fa-envelope-o" aria-hidden="true"></i> Mail: mail@example.com</NavItem>
-              </Nav>
-              <Nav pullRight className="socials">
-                <NavItem eventKey={1} className="fa fa-twitter fa-2x" href="#"></NavItem>
-                <NavItem eventKey={2} className="fa fa-youtube fa-2x" href="#"></NavItem>
-                <NavItem eventKey={3} className="fa fa-facebook fa-2x" href="#"></NavItem>
-              </Nav>
-              {/*</Navbar.Brand>*/}
+                <Navbar.Brand>
+                  <Image className="raicesLogo" src={logo} circle/>
+                  <span className='title'>RaicesPeruanas</span>
+                </Navbar.Brand>
+ {/* <Nav pullRight className="socials">
+                <NavItem eventKey={1} className="fa fa-phone fa-2x" href="#"></NavItem>
+                <NavItem eventKey={2} className="fa fa-envelope-o fa-2x" href="#"></NavItem>
+                <NavItem eventKey={3} className="fa fa-twitter fa-2x" href="#"></NavItem>
+                <NavItem eventKey={4} className="fa fa-youtube fa-2x" href="#"></NavItem>
+                <NavItem eventKey={5} className="fa fa-facebook fa-2x" href="#"></NavItem>
+              </Nav> */}
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
-            <Nav pullLeft disabled>
-              <LinkContainer to="/"><NavItem eventKey={1} href="#">RaicesPeruanas</NavItem></LinkContainer>
-            </Nav>
+            {/* <Nav>
+              <LinkContainer to="/"><NavItem eventKey={1} href="#" >RaicesPeruanas</NavItem></LinkContainer>
+            </Nav> */}
             <Nav pullRight>
-              {/*<LinkContainer to="/"><NavItem eventKey={1} href="#">Home</NavItem></LinkContainer>*/}
-              <LinkContainer to="history"><NavItem eventKey={1} href="#">History</NavItem></LinkContainer>
-              <LinkContainer to="about"><NavItem eventKey={2} href="#">About</NavItem></LinkContainer>
+              <LinkContainer to="/"><NavItem eventKey={1} href="#" >Home</NavItem></LinkContainer>
+              <LinkContainer to="history"><NavItem eventKey={2} href="#">History</NavItem></LinkContainer>
               <LinkContainer to="dances"><NavItem eventKey={3} href="#">Dances</NavItem></LinkContainer>
               <LinkContainer to="photos"><NavItem eventKey={4} href="#">Photos</NavItem></LinkContainer>
               <LinkContainer to="news"><NavItem eventKey={5} href="#">News</NavItem></LinkContainer>
@@ -69,6 +67,8 @@ class Main extends Component {
           {this.props.children}
         </section>
       </section>
+
+     
     )
   }
 }

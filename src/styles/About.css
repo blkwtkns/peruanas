@@ -1,8 +1,9 @@
-.about {
-  background: no-repeat center/100% url('../assets/machu-picchu-travel.jpg');
-  height: 50rem;
-};
-
-.main {
+.supporting {
   text-align: center;
+  background-color: #ffffff;
+  border: thin solid grey;
+}
+
+.supporting > .mainAbout, .raicesAbout {
+  color: red;
 }

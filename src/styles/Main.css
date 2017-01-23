@@ -4,20 +4,47 @@ a {
   text-decoration: none;
 }
 
-.navbar-header {
-  background-color: red;
-  float: none;
+.title {
+  margin: 1em;
+  color: red;
   font-family: 'Open Sans', sans-serif;
 }
 
-.navbar-header .navbar-left > li > a {
-  font-size: medium;
-  color: #ffffff;
+.navbar-default .navbar-brand {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+}
+
+.directs {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .socials {
-  display: block;
-  margin: 0 auto;
+  /* margin: 0 1rem; */
+  /* padding: 1rem 0; */
   color: #ffffff;
 }
 
+.socials > li {
+  margin: 0 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .raicesLogo {
+    width: 2em; 
+    height: 2em;
+    margin-top: .5em;
+  } 
+}
+
+@media only screen and (min-width: 768px) {
+  .raicesLogo {
+    width: 2.5em; 
+    height: 2.5em;
+  }
+}
+
+.raicesLogo {
+  margin-left: 1em;
+}

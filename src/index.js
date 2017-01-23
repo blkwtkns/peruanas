@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router'
 
 import Main from './components/Main'
-import About from './components/About'
 import History from './components/History'
 import Dances from './components/Dances'
 import Dancers from './components/Dancers'
@@ -16,14 +15,13 @@ ReactDOM.render((
   <Router history={browserHistory}>
     <Route component={Main}>
       <Route path="/" component={Home}/>
-      <Route path="history" component={History}/>
-      <Route path="about" component={About} />
+      <Route path="history" component={History} />
       <Route path="dances" component={Dances}/>
       <Route path="dancers" component={Dancers}/>
       <Route path="photos" component={Photos}/>
       <Route path="news" component={News}/>
     </Route>
   </Router>
-), document.getElementById('root')
+  ), document.getElementById('root')
 );
 
