@@ -2,6 +2,10 @@
   background-color: #ffffff;
 }
 
-.main {
-  text-align: center;
+@media only screen and (min-width: 768px) {
+  .main {
+    text-align: center;
+    margin: 0 15rem;
+  }
+
 }

@@ -7,3 +7,10 @@
 .supporting > .mainAbout, .raicesAbout {
   color: red;
 }
+
+
+@media only screen and (min-width: 768px) {
+  .supporting {
+    margin: 0 15rem;
+  }
+}

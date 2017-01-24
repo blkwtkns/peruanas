@@ -4,6 +4,14 @@ a {
   text-decoration: none;
 }
 
+.navMain {
+  background: #ffffff;
+}
+
+.fa-2x {
+  font-size: 1.5em;
+}
+
 .title {
   margin: 1em;
   color: red;
@@ -20,14 +28,13 @@ a {
   font-family: 'Open Sans', sans-serif;
 }
 
-.socials {
-  /* margin: 0 1rem; */
-  /* padding: 1rem 0; */
-  color: #ffffff;
+.navbar-default .navbar-nav > li > a {
+  color: red;
 }
 
-.socials > li {
-  margin: 0 1rem;
+.socials {
+  margin: 1.5rem 1rem;
+  color: red;
 }
 
 @media only screen and (max-width: 768px) {
@@ -47,4 +54,16 @@ a {
 
 .raicesLogo {
   margin-left: 1em;
+}
+
+.footer {
+  text-align: center;
+  bottom: 0;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .footer {
+    margin-top: 0 2em 0 2em;
+  }
 }
