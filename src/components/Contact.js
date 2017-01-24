@@ -46,13 +46,11 @@ class Contact extends Component {
   }
 
   databaseFoo(e){
-    // uri variable for json or DB
-    // fetch (get for testing, post for DB/production
-    // append validation message for either
-    // and append json for testing
+    // testing has gone well, time to setup DB and do real testing
+    /* let url = 'https://jsonplaceholder.typicode.com'; */
     e.preventDefault();
-    let url = 'https://jsonplaceholder.typicode.com';
-    fetch(url + '/posts/1',
+    let tacos = 'https://hbvu53d4ld.execute-api.us-west-2.amazonaws.com/prod/tacos'
+    fetch(tacos,
       {
         method: 'GET',
         headers: {
