@@ -17,3 +17,6 @@ src/assets
 
 # ignore lambdas for now
 lambdas
+
+# ignore top secret urls
+src/secrets

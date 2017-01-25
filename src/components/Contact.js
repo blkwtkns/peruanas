@@ -11,6 +11,7 @@ import {
   FormControl,
   Button
 } from 'react-bootstrap';
+import put_URL from './../secrets/awsURLs';
 import './../styles/Contact.css';
 
 function FieldGroup({
@@ -19,20 +20,23 @@ function FieldGroup({
   help,
   ...props
 }) {
+
   return (
     <FormGroup controlId={id}>
       <ControlLabel>{label}</ControlLabel>
-      <FormControl {...props} />
+      <FormControl  {...props} />
       {help && <HelpBlock>{help}</HelpBlock>}
     </FormGroup>
   );
 }
 
-function appendElement({body, title}){
+function appendElement(obj){
+  let elements = Object.keys(obj).map((el,id) => {
+    return <h3 key={id}>{obj[el]}</h3>;
+  })
   return (
     <div> 
-      <h3>{title}</h3>
-      <h4>{body}</h4>
+      {elements}
     </div>
   );
 }
@@ -48,22 +52,32 @@ class Contact extends Component {
   databaseFoo(e){
     // testing has gone well, time to setup DB and do real testing
     /* let url = 'https://jsonplaceholder.typicode.com'; */
+    /* console.log(this.nameInput.value) */
+
     e.preventDefault();
-    let tacos = 'https://hbvu53d4ld.execute-api.us-west-2.amazonaws.com/prod/tacos'
-    fetch(tacos,
+    let input = {
+      name: this.nameInput.value,
+      email: this.emailInput.value,
+      message: this.textInput.value
+    }
+    fetch(put_URL,
       {
-        method: 'GET',
+        method: 'PUT',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
-        }
+        },
+        body: JSON.stringify(input)
       })
       .then(data => data.json())
       .then(jsonData => {
         console.log(jsonData)
-        this.setState({dbInfo:jsonData})
+        this.setState({dbInfo:{success:"Thank you for your request!!!"}})
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.log(err)
+        this.setState({dbInfo:{fail:"Please re-submit"}})
+      });
     // testing works! time to get the db going!
 
   }
@@ -86,12 +100,14 @@ class Contact extends Component {
             type="text"
             label="Name"
             placeholder="Enter name"
+            inputRef={ref => { this.nameInput = ref; }}
           />
           <FieldGroup
             id="formControlsEmail"
             type="email"
             label="Email address"
             placeholder="Enter email"
+            inputRef={ref => { this.emailInput = ref; }}
           />
 
         <h3>Check all that apply please:</h3>
@@ -115,15 +131,22 @@ class Contact extends Component {
 
         <FormGroup controlId="formControlsTextarea">
           <ControlLabel>Textarea</ControlLabel>
-          <FormControl className="textarea" componentClass="textarea" placeholder="Please leave your feedback or any further request info here" />
+          <FormControl 
+            className="textarea" 
+            inputRef={ref => { this.textInput = ref; }}
+            componentClass="textarea" 
+            placeholder="Please leave your feedback or any further request info here" />
         </FormGroup>
 
         <Button type="submit" onClick={this.databaseFoo}>
           Submit
         </Button>
 
-        {stuff}
       </form>
+
+      <div>
+        {stuff}
+      </div>
 
       <div className="committeeInfo">
         <h2>Committee Members</h2>
