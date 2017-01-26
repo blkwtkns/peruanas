@@ -1,13 +1,13 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
-import '../../styles/PhotosCarousel.css'
-import gazers from '../../assets/dancers-gaze.jpg';
-import bow from '../../assets/foto8.jpg';
-import bigSmile from '../../assets/foto21.jpg';
+/* import './../styles/HistCarousel.css' */
+import gazers from './../assets/dancers-gaze.jpg';
+import bow from './../assets/foto8.jpg';
+import bigSmile from './../assets/foto21.jpg';
 
 
-const PhotosCarousel = () => (
-  <Carousel className="PhotosCarousel">
+const HistCarousel = () => (
+  <Carousel className="HistCarousel">
     <Carousel.Item>
       <Image src={ gazers } responsive/>
     </Carousel.Item>
@@ -20,4 +20,4 @@ const PhotosCarousel = () => (
   </Carousel>
 );
 
-export default PhotosCarousel;
+export default HistCarousel;

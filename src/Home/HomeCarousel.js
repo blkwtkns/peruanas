@@ -1,9 +1,9 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
-import '../../styles/HomeCarousel.css'
-import gazers from '../../assets/dancers-gaze.jpg';
-import bow from '../../assets/foto8.jpg';
-import bigSmile from '../../assets/foto21.jpg';
+/* import './../styles/HomeCarousel.css' */
+import gazers from './../assets/dancers-gaze.jpg';
+import bow from './../assets/foto8.jpg';
+import bigSmile from './../assets/foto21.jpg';
 
 
 const HomeCarousel = () => (

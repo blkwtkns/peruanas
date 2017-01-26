@@ -12,7 +12,7 @@ import {
   Button
 } from 'react-bootstrap';
 import put_URL from './../secrets/awsURLs';
-import './../styles/Contact.css';
+/* import './../styles/Contact.css'; */
 
 function FieldGroup({
   id,

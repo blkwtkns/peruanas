@@ -1,7 +1,7 @@
 // ./src/components/Dances.js
 import React from 'react';
 import { Jumbotron, ResponsiveEmbed } from 'react-bootstrap';
-import './../styles/Dances.css';
+/* import './../styles/Dances.css'; */
 
 const Dances = () => (
   <Jumbotron className="dances">

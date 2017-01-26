@@ -1,9 +1,9 @@
 // ./src/components/Home.js
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import './../styles/Home.css';
+/* import './../styles/Home.css'; */
 import About from './About';
-import HomeCarousel from './carousels/HomeCarousel';
+import HomeCarousel from './HomeCarousel';
 
 
 const Home = () => (

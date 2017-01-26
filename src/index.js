@@ -1,15 +1,16 @@
+// ./src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router'
 
-import Main from './components/Main'
-import Home from './components/Home'
-import News from './components/News'
-import History from './components/History'
-import Dances from './components/Dances'
-import Dancers from './components/Dancers'
-import Photos from './components/Photos'
-import Contact from './components/Contact'
+import Main from './Main/Main'
+import Home from './Home/Home'
+import News from './News/News'
+import History from './History/History'
+import Dances from './Dances/Dances'
+import Dancers from './Dancers/Dancers'
+import Photos from './Photos/Photos'
+import Contact from './Contact/Contact'
 import './styles/index.css';
 
 ReactDOM.render((

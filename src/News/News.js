@@ -1,9 +1,6 @@
 // ./src/components/News.js
 import React, { Component } from 'react';
-import './../styles/App.css';
-
-// <img src={logo} className="News-logo" alt="logo" />
-
+/* import './../styles/App.css'; */
 
 class News extends Component {
   render() {

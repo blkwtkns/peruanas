@@ -1,7 +1,7 @@
 // ./src/components/About.js
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import './../styles/About.css';
+/* import './../styles/About.css'; */
 
 
 const About = () => (
