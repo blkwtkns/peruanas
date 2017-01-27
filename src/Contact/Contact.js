@@ -4,31 +4,31 @@
 
 import React, { Component } from 'react';
 import {
-  HelpBlock,
   Checkbox,
-  FormGroup,
-  ControlLabel,
-  FormControl,
   Button
 } from 'react-bootstrap';
-import put_URL from './../secrets/awsURLs';
+import FieldGroup from './FieldGroup';
+import { connect } from 'react-redux';
+import { putFormAction } from './contactActions';
+
+/* import put_URL from './../secrets/awsURLs'; */
 /* import './../styles/Contact.css'; */
 
-function FieldGroup({
-  id,
-  label,
-  help,
-  ...props
-}) {
-
-  return (
-    <FormGroup controlId={id}>
-      <ControlLabel>{label}</ControlLabel>
-      <FormControl  {...props} />
-      {help && <HelpBlock>{help}</HelpBlock>}
-    </FormGroup>
-  );
-}
+/* function FieldGroup({
+ *   id,
+ *   label,
+ *   help,
+ *   ...props
+ * }) {
+ * 
+ *   return (
+ *     <FormGroup controlId={id}>
+ *       <ControlLabel>{label}</ControlLabel>
+ *       <FormControl  {...props} />
+ *       {help && <HelpBlock>{help}</HelpBlock>}
+ *     </FormGroup>
+ *   );
+ * } */
 
 function appendElement(obj){
   let elements = Object.keys(obj).map((el,id) => {
@@ -46,10 +46,10 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {dbInfo: false};
-    this.databaseFoo = this.databaseFoo.bind(this)
+    this.handleFormSubmit = this.handleFormSubmit.bind(this)
   }
 
-/*   databaseFoo(e){
+/*   handleFormSubmit(e){
  *     // testing has gone well, time to setup DB and do real testing
  *     // let url = 'https://jsonplaceholder.typicode.com'; 
  *     // console.log(this.nameInput.value) 
@@ -60,6 +60,8 @@ class Contact extends Component {
  *       email: this.emailInput.value,
  *       message: this.textInput.value
  *     }
+ *     this.props.dispatch(putFormAction(input));
+ *
  *     fetch(put_URL,
  *       {
  *         method: 'PUT',
@@ -138,7 +140,7 @@ class Contact extends Component {
             placeholder="Please leave your feedback or any further request info here" />
         </FormGroup>
 
-        <Button type="submit" onClick={this.databaseFoo}>
+        <Button type="submit" onClick={this.handleFormSubmit}>
           Submit
         </Button>
 
