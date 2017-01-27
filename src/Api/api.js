@@ -1,7 +1,5 @@
-import awsURL from './../secrets/awsURLs';
-
 export const putRaicesForm = (input) => {
-  const url = awsURL;
+  const url = 'https://axq1xbuxtl.execute-api.us-west-2.amazonaws.com/prod/raicesapi';
 
   return fetch(url, {
   
@@ -14,7 +12,14 @@ export const putRaicesForm = (input) => {
   
   })
   .then(response => response.json())
-    .then(json => {dbInfo: {success: "Thank you for your request!!"}})
-    .catch(err => {dbInfo: {success: "Please re-submit"}})
+    .then(json => {
+      console.log(json)
+      return {
+        dbInfo: {
+          json
+        }
+      }
+    })
+    .catch(err => {dbInfo: {err}})
 
 }

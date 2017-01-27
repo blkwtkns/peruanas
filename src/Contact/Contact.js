@@ -29,13 +29,12 @@ function appendElement(obj){
 class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = {dbInfo: false};
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
   }
 
   handleFormSubmit(e){
     e.preventDefault();
-    let input = {
+    const input = {
       name: this.nameInput.value,
       email: this.emailInput.value,
       message: this.textInput.value
@@ -79,7 +78,8 @@ class Contact extends Component {
   } */
 
   render(){
-    const append = this.state.dbInfo;
+    console.log(this.props)
+    const append = this.props.dbInfo;
     let stuff = null;
     if(append){
       stuff = appendElement(append);
@@ -171,8 +171,8 @@ class Contact extends Component {
   };
 };
 
-const mapStateToProps = ({stats}) => ({
-  stats: stats
+const mapStateToProps = ({dbInfo}) => ({
+  dbInfo
 });
 
 export default connect(mapStateToProps)(Contact);

@@ -5,7 +5,7 @@ import * as types from '../constants/actionTypes';
 // Responsible for making PUT request to AWS API gateway
 // and then instructing the saga middleware on the next line of action,
 // for success or failure
-export function* putFormSaga(payload){
+export function* putFormSaga({ payload }){
   try {
     const stats = yield call(putRaicesForm, payload);
     yield [
