@@ -1,5 +1,5 @@
 export const putRaicesForm = (input) => {
-  const url = 'https://axq1xbuxtl.execute-api.us-west-2.amazonaws.com/prod/raicesapi';
+  console.log('put triggered?')
 
   return fetch(url, {
   
@@ -15,11 +15,9 @@ export const putRaicesForm = (input) => {
     .then(json => {
       console.log(json)
       return {
-        dbInfo: {
-          json
-        }
+        dbInfo: true 
       }
     })
-    .catch(err => {dbInfo: {err}})
+    .catch(err => ({dbInfo: false}))
 
 }

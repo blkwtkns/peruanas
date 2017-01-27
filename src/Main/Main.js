@@ -7,6 +7,7 @@ import Header from './Header'
 /* import './../styles/Main.css'; */
 
 class Main extends Component {
+
   render(){
     return (
       <section>

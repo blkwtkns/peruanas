@@ -6,12 +6,15 @@ import * as types from '../constants/actionTypes';
 // and then instructing the saga middleware on the next line of action,
 // for success or failure
 export function* putFormSaga({ payload }){
-  try {
-    const stats = yield call(putRaicesForm, payload);
-    yield [
-      put({ type: types.PUT_CONTACT_FORM_SUCCESS, stats})
-    ];
-  } catch(error){
-    yield put({ type: types.PUT_CONTACT_FORM_ERROR, error})
+  console.log('putFormSaga triggered')
+  while(true){
+    try {
+      const status = yield call(putRaicesForm, payload);
+      yield [
+        put({ type: types.PUT_CONTACT_FORM_SUCCESS, status})
+      ];
+    } catch(error){
+        put({ type: types.PUT_CONTACT_FORM_ERROR, status})
+    }
   }
 }

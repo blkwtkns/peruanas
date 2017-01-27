@@ -4,5 +4,6 @@ import * as types from '../constants/actionTypes';
 
 // Watches for PUT_CONTACT_FORM action type asynchronously
 export default function* watchPutForm(){
+  console.log('watchPutForm triggered')
   yield* takeLatest(types.PUT_CONTACT_FORM, putFormSaga);
 }

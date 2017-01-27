@@ -16,6 +16,7 @@ import Contact from './Contact/Contact'
 import './styles/index.css';
 
 const store = configureStore();
+console.log(store)
 
 ReactDOM.render((
   <Provider store={store}>

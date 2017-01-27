@@ -1,1 +1,1 @@
-export default {dbInfo: false};
+export default {};

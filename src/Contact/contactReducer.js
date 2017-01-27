@@ -6,9 +6,9 @@ import * as types from '../constants/actionTypes';
 export default function (state = initialState, action){
   switch(action.type){
     case types.PUT_CONTACT_FORM_SUCCESS:
-      return [...state, action.payload];
+      return action.status;
     case types.PUT_CONTACT_FORM_ERROR:
-      return [...state, action.payload];
+      return action.status;
     default: 
       return state;
   }
