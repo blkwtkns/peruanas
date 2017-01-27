@@ -1,10 +1,11 @@
 // ./src/components/Contact.js
-// use JSON placeholder for tesing
 // https://jsonplaceholder.typicode.com/
-
 import React, { Component } from 'react';
 import {
   Checkbox,
+  FormGroup,
+  ControlLabel,
+  FormControl,
   Button
 } from 'react-bootstrap';
 import FieldGroup from './FieldGroup';
@@ -13,22 +14,6 @@ import { putFormAction } from './contactActions';
 
 /* import put_URL from './../secrets/awsURLs'; */
 /* import './../styles/Contact.css'; */
-
-/* function FieldGroup({
- *   id,
- *   label,
- *   help,
- *   ...props
- * }) {
- * 
- *   return (
- *     <FormGroup controlId={id}>
- *       <ControlLabel>{label}</ControlLabel>
- *       <FormControl  {...props} />
- *       {help && <HelpBlock>{help}</HelpBlock>}
- *     </FormGroup>
- *   );
- * } */
 
 function appendElement(obj){
   let elements = Object.keys(obj).map((el,id) => {
@@ -41,12 +26,21 @@ function appendElement(obj){
   );
 }
 
-
 class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {dbInfo: false};
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
+  }
+
+  handleFormSubmit(e){
+    e.preventDefault();
+    let input = {
+      name: this.nameInput.value,
+      email: this.emailInput.value,
+      message: this.textInput.value
+    }
+    this.props.dispatch(putFormAction(input));
   }
 
 /*   handleFormSubmit(e){
@@ -176,4 +170,9 @@ class Contact extends Component {
     );
   };
 };
-export default Contact;
+
+const mapStateToProps = ({stats}) => ({
+  stats: stats
+});
+
+export default connect(mapStateToProps)(Contact);
