@@ -49,38 +49,38 @@ class Contact extends Component {
     this.databaseFoo = this.databaseFoo.bind(this)
   }
 
-  databaseFoo(e){
-    // testing has gone well, time to setup DB and do real testing
-    /* let url = 'https://jsonplaceholder.typicode.com'; */
-    /* console.log(this.nameInput.value) */
-
-    e.preventDefault();
-    let input = {
-      name: this.nameInput.value,
-      email: this.emailInput.value,
-      message: this.textInput.value
-    }
-    fetch(put_URL,
-      {
-        method: 'PUT',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(input)
-      })
-      .then(data => data.json())
-      .then(jsonData => {
-        console.log(jsonData)
-        this.setState({dbInfo:{success:"Thank you for your request!!!"}})
-      })
-      .catch(err => {
-        console.log(err)
-        this.setState({dbInfo:{fail:"Please re-submit"}})
-      });
+/*   databaseFoo(e){
+ *     // testing has gone well, time to setup DB and do real testing
+ *     // let url = 'https://jsonplaceholder.typicode.com'; 
+ *     // console.log(this.nameInput.value) 
+ * 
+ *     e.preventDefault();
+ *     let input = {
+ *       name: this.nameInput.value,
+ *       email: this.emailInput.value,
+ *       message: this.textInput.value
+ *     }
+ *     fetch(put_URL,
+ *       {
+ *         method: 'PUT',
+ *         headers: {
+ *           'Accept': 'application/json',
+ *           'Content-Type': 'application/json',
+ *         },
+ *         body: JSON.stringify(input)
+ *       })
+ *       .then(data => data.json())
+ *       .then(jsonData => {
+ *         console.log(jsonData)
+ *         this.setState({dbInfo:{success:"Thank you for your request!!!"}})
+ *       })
+ *       .catch(err => {
+ *         console.log(err)
+ *         this.setState({dbInfo:{fail:"Please re-submit"}})
+ *       }); 
     // testing works! time to get the db going!
 
-  }
+  } */
 
   render(){
     const append = this.state.dbInfo;
