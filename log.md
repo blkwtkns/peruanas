@@ -6,6 +6,6 @@
 * structure backend for serving files and template server-side rendering process (testing done, connected with AWS api gateway, lambda, and dynamoDB; server-side/isomorphic stuff needs to be done)
 * setup aws lambda structure for dynamoDB connection for forms(testing done, needs to be fleshed out more, and production policies and users constructed)
 * correctly path pics with galleries/slideshows(construct logic and directory paths for pictures; convert to png/svg if possible)
-* fuse redux logic into framework (use redux-saga for greater readability for async stuff)
+* redux/redux-saga mosted fused, state is flowing through components correctly (also checkout react-router-redux)
 * get input from Erbelia
 
