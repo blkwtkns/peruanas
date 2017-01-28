@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router'
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
+import rootSaga from './sagas/rootSaga';
 
 import Main from './Main/Main'
 import Home from './Home/Home'
@@ -16,7 +17,9 @@ import Contact from './Contact/Contact'
 import './styles/index.css';
 
 const store = configureStore();
-console.log(store)
+store.runSaga(rootSaga);
+
+// console.log(store)
 
 ReactDOM.render((
   <Provider store={store}>

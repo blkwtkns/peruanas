@@ -1,22 +1,22 @@
-import initialState from '../store/initialState';
 import * as types from '../constants/actionTypes';
 
 // Handle Contact related actions
 
-export default function(state = initialState, action) {
-  console.log(state);
+const contactReducer = (state = {}, action) => {
   switch (action.type) {
     case types.PUT_CONTACT_FORM_SUCCESS:
       return {
         ...state,
-        dbInfo: action.status,
+        dbInfo: true,
       };
     case types.PUT_CONTACT_FORM_ERROR:
       return {
         ...state,
-        dbInfo: action.status,
+        dbInfo: 'error',
       };
     default:
       return state;
   }
-}
+};
+
+export default contactReducer;

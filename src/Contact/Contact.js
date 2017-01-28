@@ -15,9 +15,7 @@ import {
   connect
 } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import {
-  putFormAction
-} from './contactActions';
+import putFormAction from './contactActions';
 
 /* import put_URL from './../secrets/awsURLs'; */
 /* import './../styles/Contact.css'; */
@@ -50,7 +48,6 @@ class Contact extends Component {
   }
 
   render() {
-    console.log(this.props);
     const append = this.props.dbInfo;
 
     return (
@@ -141,16 +138,12 @@ class Contact extends Component {
   };
 };
 
-const mapStateToProps = state => {
-  return {
-    dbInfo: state.dbInfo,
-  }
-};
+const mapStateToProps = state => ({
+   state 
+})
 
 
 // Wrap action creator with dispatch method.
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ putFormAction }, dispatch)
-};
+const mapDispatchToProps = dispatch => bindActionCreators({ putFormAction }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contact);
