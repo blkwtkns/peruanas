@@ -14,6 +14,7 @@ import FieldGroup from './FieldGroup';
 import {
   connect
 } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import {
   putFormAction
 } from './contactActions';
@@ -25,8 +26,8 @@ function appendElement(bool) {
   switch (bool) {
     case bool === true:
       return <h3 key='success1'>'Your submission was successful!'</h3>;
-    case bool === false:
-      return <h3 key='success1'>'Your submission was unsuccessful!'</h3>
+    case bool === 'error':
+      return <h3 key='success1'>'Your submission was unsuccessful!'</h3>;
     default:
       return null;
   }
@@ -35,7 +36,7 @@ function appendElement(bool) {
 class Contact extends Component {
   constructor(props) {
     super(props);
-    this.handleFormSubmit = this.handleFormSubmit.bind(this)
+    this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
   handleFormSubmit(e) {
@@ -43,14 +44,14 @@ class Contact extends Component {
     const input = {
       name: this.nameInput.value,
       email: this.emailInput.value,
-      message: this.textInput.value
-    }
+      message: this.textInput.value,
+    };
     this.props.putFormAction(input);
   }
 
   render() {
+    console.log(this.props);
     const append = this.props.dbInfo;
-    console.log(this.props)
 
     return (
       <section className="Contact">
@@ -94,15 +95,15 @@ class Contact extends Component {
 
         <FormGroup controlId="formControlsTextarea">
           <ControlLabel>Textarea</ControlLabel>
-          <FormControl 
-            className="textarea" 
+          <FormControl
+            className="textarea"
             inputRef={ref => { this.textInput = ref; }}
-            componentClass="textarea" 
+            componentClass="textarea"
             placeholder="Please leave your feedback or any further request info here" />
         </FormGroup>
 
-        <Button 
-          type="submit" 
+        <Button
+          type="submit"
           onClick={this.handleFormSubmit}>
           Submit
         </Button>
@@ -140,13 +141,16 @@ class Contact extends Component {
   };
 };
 
-const mapStateToProps = (state) => ({
-  state
-});
+const mapStateToProps = state => {
+  return {
+    dbInfo: state.dbInfo,
+  }
+};
 
-// Wrap action creator with dispatch method. 
-const mapDispatchToProps = (dispatch) => ({
-  putFormAction: (input) => dispatch(putFormAction(input))
-})
+
+// Wrap action creator with dispatch method.
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ putFormAction }, dispatch)
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contact);
