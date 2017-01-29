@@ -3,18 +3,22 @@ import {
   applyMiddleware
 } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import rootReducer from '../rootReducer';
+/* import rootReducer from '../rootReducer'; */
+import rootSaga from '../sagas/rootSaga';
+import contactReducer from '../Contact/contactReducer';
 
 
 // mount it to store
+// NB only single reducer used since there is only one
+// current reducer
 const configureStore = () => {
   // saga middleware
   const sagaMiddleware = createSagaMiddleware();
 
   return {
-    ...createStore(rootReducer,
+    ...createStore(contactReducer,
       applyMiddleware(sagaMiddleware)),
-    runSaga: sagaMiddleware.run
+    runSaga: sagaMiddleware.run(rootSaga)
   };
 
 };

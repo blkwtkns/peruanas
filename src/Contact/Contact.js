@@ -14,22 +14,20 @@ import FieldGroup from './FieldGroup';
 import {
   connect
 } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import {
+  bindActionCreators
+} from 'redux';
 import putFormAction from './contactActions';
 
-/* import put_URL from './../secrets/awsURLs'; */
 /* import './../styles/Contact.css'; */
 
-function appendElement(bool) {
-  switch (bool) {
-    case bool === true:
-      return <h3 key='success1'>'Your submission was successful!'</h3>;
-    case bool === 'error':
-      return <h3 key='success1'>'Your submission was unsuccessful!'</h3>;
-    default:
-      return null;
-  }
-}
+const SubmitValid = () => (
+      <div><h3 key='submitSuccess'>'Your submission was successful!'</h3></div>
+)
+
+/* const SubmitInvalid = () => (
+ *       <div><h3 key='submitInvalid'>'Your submission was unsuccessful!'</h3></div>
+ * ) */
 
 class Contact extends Component {
   constructor(props) {
@@ -48,7 +46,10 @@ class Contact extends Component {
   }
 
   render() {
-    const append = this.props.dbInfo;
+    /* console.log(this.props) */
+    const {
+      dbInfo
+    } = this.props;
 
     return (
       <section className="Contact">
@@ -107,9 +108,7 @@ class Contact extends Component {
 
       </form>
 
-      <div>
-        { appendElement(append) }
-      </div>
+      { dbInfo ? <SubmitValid /> : null }
 
       <div className="committeeInfo">
         <h2>Committee Members</h2>
@@ -138,12 +137,15 @@ class Contact extends Component {
   };
 };
 
-const mapStateToProps = state => ({
-   state 
+const mapStateToProps = ({dbInfo}) => ({
+    dbInfo
 })
 
 
+
 // Wrap action creator with dispatch method.
-const mapDispatchToProps = dispatch => bindActionCreators({ putFormAction }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({
+  putFormAction
+}, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contact);

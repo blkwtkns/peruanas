@@ -1,9 +1,10 @@
 import { combineReducers } from 'redux';
-import forms from './Contact/contactReducer';
+import contactReducer from './Contact/contactReducer';
 
-// Combine reducers (only one for now)
+// DO NOT USE UNLESS THERE ARE MULTIPLE REDUCERS
+// Combine reducers 
 const rootReducer = combineReducers({
-  forms
+  contactReducer
 });
 
 export default rootReducer;

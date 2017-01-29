@@ -2,7 +2,8 @@ import * as types from '../constants/actionTypes';
 
 // Handle Contact related actions
 
-const contactReducer = (state = {}, action) => {
+const contactReducer = (state = {dbInfo: false}, action) => {
+  console.log(state)
   switch (action.type) {
     case types.PUT_CONTACT_FORM_SUCCESS:
       return {
