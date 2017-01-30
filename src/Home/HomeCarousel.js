@@ -1,21 +1,21 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
 /* import './../styles/HomeCarousel.css' */
-import gazers from './../assets/dancers-gaze.jpg';
-import bow from './../assets/foto8.jpg';
-import bigSmile from './../assets/foto21.jpg';
+/* import gazers from './../assets/dancers-gaze.jpg';
+ * import bow from './../assets/foto8.jpg';
+ * import bigSmile from './../assets/foto21.jpg'; */
 
 
 const HomeCarousel = () => (
   <Carousel className="HomeCarousel">
     <Carousel.Item>
-      <Image src={ gazers } responsive/>
+      <Image src={ require('./../assets/dancers-gaze.jpg') } responsive/>
     </Carousel.Item>
     <Carousel.Item>
-      <Image src={ bow } responsive/>
+      <Image src={ require('./../assets/foto8.jpg') } responsive/>
     </Carousel.Item>
     <Carousel.Item>
-      <Image src={ bigSmile } responsive/>
+      <Image src={ require('./../assets/foto21.jpg') } responsive/>
     </Carousel.Item>
   </Carousel>
 );

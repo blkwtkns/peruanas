@@ -9,7 +9,7 @@ import {
   Nav
 } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-import logo from './../assets/image1-small-23.png'; 
+/* import logo from '../assets/image1-small-23.png';  */
 /* import './../styles/Main.css'; */
 
 class Header extends Component {
@@ -19,7 +19,7 @@ class Header extends Component {
       <Navbar fluid fixedTop collapseOnSelect className="navMain">
         <Navbar.Header>
           <Navbar.Brand>
-            <Image className="raicesLogo" src={logo} circle/>
+            <Image className="raicesLogo" src={require('../assets/image1-small-23.png')} circle/>
             <span className='title'>RaicesPeruanas</span>
           </Navbar.Brand>
           <Navbar.Toggle />

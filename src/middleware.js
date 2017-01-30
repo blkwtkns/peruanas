@@ -21,7 +21,7 @@ export default (req, res) => {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/favicon.ico/apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/favicon.ico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="%PUBLIC_URL%/favicon.ico/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="%PUBLIC_URL%/favicon.ico/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/favicon.ico/apple-icon-76x76.png">
@@ -37,7 +37,7 @@ export default (req, res) => {
     <link rel="manifest" href="%PUBLIC_URL%/favicon.ico/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="%PUBLIC_URL%/favicon.ico/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff"> -->
     <title>Raices Peruanas</title>
 
     <!-- Latest compiled and minified CSS -->
@@ -60,7 +60,7 @@ export default (req, res) => {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/favicon.ico/apple-icon-57x57.png">
+    <!-- <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/favicon.ico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="%PUBLIC_URL%/favicon.ico/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="%PUBLIC_URL%/favicon.ico/apple-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="76x76" href="%PUBLIC_URL%/favicon.ico/apple-icon-76x76.png">
@@ -76,7 +76,7 @@ export default (req, res) => {
     <link rel="manifest" href="%PUBLIC_URL%/favicon.ico/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="%PUBLIC_URL%/favicon.ico/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#ffffff"> -->
     <title>Raices Peruanas</title>
 
     <!-- Latest compiled and minified CSS -->
