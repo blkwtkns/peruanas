@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './store/configureStore';
 import rootReducer from './rootReducer'; 
-import rootSaga from './sagas'
+import rootSaga from './sagas/rootSaga'
 import routes from './routes';
 
 if (process.env.WEBPACK) require('./styles/index.scss');

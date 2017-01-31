@@ -1,12 +1,12 @@
 import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
-import HTMLDocument, { doctype } from 'server/views/HTMLDocument'
+import HTMLDocument, { doctype } from './server/views/HTMLDocument'
 /* import { createStore } from 'redux'; */
 import configureStore from './store/configureStore'
 import { Provider } from 'react-redux';
 import { match, RouterContext } from 'react-router';
 /* import rootReducer from './rootReducer'; */
-import rootSaga from './sagas'
+import rootSaga from './sagas/rootSaga'
 import routes from './routes';
 
 function renderApplication(props){
