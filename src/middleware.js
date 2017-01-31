@@ -34,9 +34,10 @@ export default (req, res) => {
         store.runSaga(rootSaga).done.then(()=>{
           const state = store.getState();
           const html = renderToString(rootComponent);
+
+          res.status(200).send(renderApplication({state, html}));
         })
 
-				res.status(200).send(renderApplication({state, html}));
 
 			} else if(process.env.NODE_ENV == 'production') {
 
