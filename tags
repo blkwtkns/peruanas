@@ -4,5 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-appendElement	src/Contact/Contact.js	/^function appendElement(bool) {$/;"	f
+entry	webpack.config.dev.js	/^module.exports = {$/;"	p	class:module.exports
+entry	webpack.config.prod.js	/^module.exports = {$/;"	p	class:module.exports
 name	src/Contact/Contact.js	/^    const input = {$/;"	p	class:const
