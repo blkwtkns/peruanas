@@ -8,6 +8,6 @@
 * correctly path pics with galleries/slideshows(construct logic and directory paths for pictures; convert to png/svg if possible)
 * redux/redux-saga mosted fused, state is flowing through components correctly (also checkout react-router-redux)
 * get input from Erbelia
-* not rehydrating correctly on refresh
+* not rehydrating correctly on refresh (now it is, but verrry strange, might have been a module issue)
 * state not altering correctly
 
