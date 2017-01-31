@@ -7,3 +7,5 @@
 entry	webpack.config.dev.js	/^module.exports = {$/;"	p	class:module.exports
 entry	webpack.config.prod.js	/^module.exports = {$/;"	p	class:module.exports
 name	src/Contact/Contact.js	/^    const input = {$/;"	p	class:const
+renderApplication	src/middleware.js	/^function renderApplication(props){$/;"	f
+state	src/server/views/HTMLDocument.js	/^  static propTypes = {$/;"	p	class:export
