@@ -1,25 +1,31 @@
 // ./src/index.js
 import React from 'react';
-import { render } from 'react-dom';
-import { Router, browserHistory } from 'react-router';
-import { Provider } from 'react-redux';
+import {
+  render
+} from 'react-dom';
+import {
+  Router,
+  browserHistory
+} from 'react-router';
+import {
+  Provider
+} from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
-import configureStore from './store/configureStore';
-/* import rootReducer from './rootReducer';  */
-import contactReducer from './Contact/contactReducer';
+import configureStore from './configureStore';
+import rootReducer from './rootReducer'; 
 import rootSaga from './sagas/rootSaga'
 import routes from './routes';
 
 
 /* const store = configureStore(rootReducer); */
 
-const store = configureStore(window.__INITIAL_STATE__); 
+const store = configureStore(window.__INITIAL_STATE__);
 store.runSaga(rootSaga)
 const history = syncHistoryWithStore(browserHistory, store);
 
 render(
   <Provider store={store}>
-    <Router history={browserHistory}>
+    <Router history={history}>
       { routes }
     </Router>
   </Provider>,
@@ -27,7 +33,7 @@ render(
 );
 
 if (process.env.NODE_ENV == 'development' && module.hot) {
-  module.hot.accept('./Contact/contactReducer', () => {
-    store.replaceReducer(require('./Contact/contactReducer').default);
+  module.hot.accept('./rootReducer', () => {
+    store.replaceReducer(require('./rootReducer').default);
   });
 }

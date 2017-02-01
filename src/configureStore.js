@@ -4,10 +4,9 @@ import {
 } from 'redux';
 import createSagaMiddleware, { END } from 'redux-saga';
 import createLogger from 'redux-logger'
-/* import rootReducer from './rootReducer';  */
+import rootReducer from './rootReducer'; 
 
 // import rootSaga from '../sagas/rootSaga';
-import contactReducer from '../Contact/contactReducer'; 
 
 
 const sagaMiddleware = createSagaMiddleware();
@@ -24,7 +23,7 @@ export default (initialState) => {
   // saga middleware
 
   const store = createStore(
-      contactReducer,
+      rootReducer,
       initialState,
       applyMiddleware(...middleware)
     );

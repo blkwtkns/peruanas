@@ -37,6 +37,7 @@ export default class Raices extends Component {
 
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"/>
+          <link rel="stylesheet" href="bundle.css"/>
         </head>
         <body>
           <div id="mount" dangerouslySetInnerHTML={{__html: this.props.html}} />
