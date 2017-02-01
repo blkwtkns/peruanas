@@ -5,7 +5,8 @@ import { Router, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import configureStore from './store/configureStore';
-import rootReducer from './rootReducer'; 
+/* import rootReducer from './rootReducer';  */
+import contactReducer from './Contact/contactReducer';
 import rootSaga from './sagas/rootSaga'
 import routes from './routes';
 
@@ -26,7 +27,7 @@ render(
 );
 
 if (process.env.NODE_ENV == 'development' && module.hot) {
-  module.hot.accept('./rootReducer', () => {
-    store.replaceReducer(require('./rootReducer').default);
+  module.hot.accept('./Contact/contactReducer', () => {
+    store.replaceReducer(require('./Contact/contactReducer').default);
   });
 }

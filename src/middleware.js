@@ -1,7 +1,7 @@
 import React from 'react';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import HTMLDocument, { doctype } from './server/views/HTMLDocument'
-import configureStore from './store/configureStore'
+import configureStore from './configureStore'
 import { Provider } from 'react-redux';
 import { match, RouterContext } from 'react-router';
 import rootSaga from './sagas/rootSaga'
