@@ -6,6 +6,7 @@ import {
 import HTMLDocument, {
   doctype
 } from './server/views/HTMLDocument'
+import DevHTML from './server/views/DevHTML'
 import configureStore from './configureStore'
 import {
   Provider
@@ -19,6 +20,10 @@ import routes from './routes';
 
 function renderApplication(props) {
   return doctype + renderToStaticMarkup(<HTMLDocument { ...props} />);
+}
+
+const renderDevHTML = (props) => {
+  return doctype + renderToStaticMarkup(<DevHTML {...props} />);
 }
 
 export default (req, res) => {
@@ -39,42 +44,31 @@ export default (req, res) => {
           </Provider>
       );
 
-      if (process.env.NODE_ENV == 'development') {
-        res.status(200).send(`
-        <!doctype html>
-        <html>
-            <head>
-                <meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-                <title>Raices Peruanas - Peruvian Dance, Music, and Culture</title>
+      store.runSaga(rootSaga).done.then(() => {
+        const state = store.getState();
+        console.log('runSaga on middleware', state)
 
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
-                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"/>
-            </head>
-            <body>
-                <div id='mount'></div>
-                <script src='bundle.js'></script>
-                <script src="https://use.fontawesome.com/e076ed21e5.js"></script>
-            </body>
-        </html>
-    `);
+        if (process.env.NODE_ENV == 'development') {
 
-      } else if (process.env.NODE_ENV == 'production') {
+          res.status(200).send(renderDevHTML({
+            state
+          }));
 
-        store.runSaga(rootSaga).done.then(() => {
-          const state = store.getState();
+        } else if (process.env.NODE_ENV == 'production') {
+
           const html = renderToString(rootComponent);
-
           res.status(200).send(renderApplication({
             state,
             html
           }));
-        })
 
-        renderToString(rootComponent)
+        }
 
-        store.close();
-      }
+      })
+
+      renderToString(rootComponent)
+      store.close();
+
     } else {
       res.status(404).send('Not found');
     }

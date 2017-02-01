@@ -4,6 +4,7 @@ import {
   render
 } from 'react-dom';
 import {
+  match,
   Router,
   browserHistory
 } from 'react-router';
@@ -19,21 +20,25 @@ import routes from './routes';
 
 /* const store = configureStore(rootReducer); */
 
+/* console.log('window', window.__INITIAL_STATE__) */
+
 const store = configureStore(window.__INITIAL_STATE__);
+
+if (process.env.NODE_ENV == 'development' && module.hot) {
+    module.hot.accept('./rootReducer', () => {
+      store.replaceReducer(require('./rootReducer').default);
+    });
+  }
+
 store.runSaga(rootSaga)
 const history = syncHistoryWithStore(browserHistory, store);
 
-render(
-  <Provider store={store}>
-    <Router history={history}>
-      { routes }
-    </Router>
-  </Provider>,
-  document.getElementById('mount')
-);
+match({history, routes}, (error, redirect, props) => {
+  render(
+    <Provider store={store}>
+      <Router {...props} />
+    </Provider>,
+    document.getElementById('mount')
+  );
+})
 
-if (process.env.NODE_ENV == 'development' && module.hot) {
-  module.hot.accept('./rootReducer', () => {
-    store.replaceReducer(require('./rootReducer').default);
-  });
-}

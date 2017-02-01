@@ -22,12 +22,12 @@ import putFormAction from './contactActions';
 /* import './../styles/Contact.css'; */
 
 const SubmitValid = () => (
-      <div><h3 key='submitSuccess'>'Your submission was successful!'</h3></div>
+     <div><h3 key='submitSuccess'>'Your submission was successful!'</h3></div> 
 )
 
-/* const SubmitInvalid = () => (
- *       <div><h3 key='submitInvalid'>'Your submission was unsuccessful!'</h3></div>
- * ) */
+const SubmitInvalid = () => (
+  <div><h3 key='submitInvalid'>'Your submission was unsuccessful!'</h3></div>
+)
 
 class Contact extends Component {
   constructor(props) {
@@ -45,11 +45,16 @@ class Contact extends Component {
     this.props.putFormAction(input);
   }
 
+  componentDidMount(){
+    console.log('inside Contact component', this.props)
+  }
+
   render() {
-    /* console.log(this.props) */
-    const {
-      dbInfo
-    } = this.props;
+    let submit  = null;
+
+    /* if (dbInfo) {
+     *   submit = dbInfo === true ? <SubmitValid /> : <SubmitInvalid />;
+     * } */
 
     return (
       <section className="Contact">
@@ -108,7 +113,7 @@ class Contact extends Component {
 
       </form>
 
-      { dbInfo ? <SubmitValid /> : null }
+      { submit }
 
       <div className="committeeInfo">
         <h2>Committee Members</h2>
