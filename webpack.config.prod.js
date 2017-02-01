@@ -40,8 +40,8 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader!postcss-loader'),
-				include: path.resolve(__dirname, 'src')
+        loader: ExtractTextPlugin.extract('style', 'css!sass!postcss'),
+        include: path.resolve(__dirname, 'src')
       },
       {
         test: /\.(ico|png|gif|jpg|svg)$/,

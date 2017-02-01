@@ -39,7 +39,27 @@ export default (req, res) => {
 
 			} else if(process.env.NODE_ENV == 'production') {
 
-				res.status(200).send(renderToString(rootComponent));
+        res.status(200).send(`
+        <!doctype html>
+        <html>
+            <header>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel='stylesheet' href='bundle.css'>
+                <title>Raices Peruanas - Peruvian Dance, Music, and Culture</title>
+
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"/>
+                <link rel="stylesheet" href="bundle.css"/>
+            </header>
+            <body>
+                <div id='mount'>${renderToString(rootComponent)}</div>
+                <script src='bundle.js'></script>
+                <script src="https://use.fontawesome.com/e076ed21e5.js"></script>
+            </body>
+        </html>
+    `);
+        store.close();
 			}
 		} else {
 			res.status(404).send('Not found');

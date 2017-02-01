@@ -36,14 +36,11 @@ export default class Raices extends Component {
           <title>Raices Peruanas - Peruvian Dance, Music, and Culture</title>
 
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
-
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"/>
-          <link rel='stylesheet' href='bundle.css'/>
         </head>
         <body>
           <div id="mount" dangerouslySetInnerHTML={{__html: this.props.html}} />
           <script dangerouslySetInnerHTML={{__html: `window.__INITIAL_STATE__ = ${JSON.stringify(this.props.state)};`}} />
-
 
           <script src='bundle.js'></script>
           <script src="https://use.fontawesome.com/e076ed21e5.js"></script>

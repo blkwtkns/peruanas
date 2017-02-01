@@ -16,7 +16,6 @@
           "extensions": [".less", ".css", ".scss"]
         }
         ],
-        "react-hot-loader/babel"
       ]
     }
   }
