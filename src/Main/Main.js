@@ -5,6 +5,7 @@ import Footer from './Footer';
 import Header from './Header'
 
 if (process.env.WEBPACK) require('./main.scss');
+/* require('./main.scss'); */
 /* import './../styles/Main.css'; */
 
 class Main extends Component {

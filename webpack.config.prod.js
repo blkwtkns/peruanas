@@ -39,8 +39,8 @@ module.exports = {
 				include: path.resolve(__dirname, 'src')
 			},
 			{
-				test: /\.scss/,
-				loader: ExtractTextPlugin.extract('style', 'css!sass!postcss'),
+				test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader!postcss-loader'),
 				include: path.resolve(__dirname, 'src')
       },
       {
