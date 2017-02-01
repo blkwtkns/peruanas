@@ -19,7 +19,7 @@ class Header extends Component {
       <Navbar fluid fixedTop collapseOnSelect className="navMain">
         <Navbar.Header>
           <Navbar.Brand>
-            <Image className="raicesLogo" src={require('../assets/image1-small-23.png')} circle/>
+            <Image className="raicesLogo" src={ process.env.WEBPACK ? require('../assets/image1-small-23.png') : './assets/image1-small-23.png'} circle/>
             <span className='title'>RaicesPeruanas</span>
           </Navbar.Brand>
           <Navbar.Toggle />
