@@ -14,7 +14,7 @@ import regeneratorRuntime from 'regenerator-runtime';
 export default function* putFormSaga({
   payload,
 }) {
-  console.log('putFormSaga triggered');
+  console.log('putFormSaga payload and url', putURL, payload);
   try {
     const status = yield call(putRaicesForm, putURL, payload);
     yield put({
@@ -23,7 +23,7 @@ export default function* putFormSaga({
     });
 
   } catch (error) {
-    put({
+    yield put({
       type: types.PUT_CONTACT_FORM_ERROR,
       status,
     });
