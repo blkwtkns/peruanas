@@ -28,7 +28,7 @@ const renderDevHTML = (props) => {
 }
 
 export default (req, res) => {
-  const store = configureStore({dbInfo: false});
+  const store = configureStore();
 
   match({
     routes,
