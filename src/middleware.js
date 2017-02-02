@@ -13,7 +13,8 @@ import {
 } from 'react-redux';
 import {
   match,
-  RouterContext
+  RouterContext,
+  createMemoryHistory
 } from 'react-router';
 import rootSaga from './sagas/rootSaga'
 import routes from './routes';
@@ -27,7 +28,7 @@ const renderDevHTML = (props) => {
 }
 
 export default (req, res) => {
-  const store = configureStore();
+  const store = configureStore({dbInfo: false});
 
   match({
     routes,
@@ -39,14 +40,14 @@ export default (req, res) => {
       res.redirect(302, redirect.pathname + redirect.search);
     } else if (props) {
       const rootComponent = (
-        <Provider store={store}>
+        <Provider store={store} key="provider">
             <RouterContext {...props}/>
           </Provider>
       );
 
       store.runSaga(rootSaga).done.then(() => {
         const state = store.getState();
-        console.log('runSaga on middleware', state)
+        /* console.log('runSaga on middleware', state) */
 
         if (process.env.NODE_ENV == 'development') {
 

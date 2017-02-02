@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component, PropTypes } from 'react';
+import serialize from 'serialize-javascript';
 
 export const doctype = '<!doctype html>';
 
@@ -9,6 +10,7 @@ export default class Raices extends Component {
   }
 
   render() {
+    /* console.log('devHTML instance', this.props.state) */
     return (
       <html>
         <head>
@@ -23,7 +25,7 @@ export default class Raices extends Component {
         </head>
         <body>
           <div id="mount"></div> 
-          <script dangerouslySetInnerHTML={{__html: `window.__INITIAL_STATE__ = ${JSON.stringify(this.props.state)};`}} />
+          <script dangerouslySetInnerHTML={{__html: `window.__INITIAL_STATE__ = ${serialize(this.props.state)};`}} />
 
           <script src='bundle.js'></script>
           <script src="https://use.fontawesome.com/e076ed21e5.js"></script>

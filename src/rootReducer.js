@@ -5,6 +5,6 @@ import contactReducer from './Contact/contactReducer';
 // DO NOT USE UNLESS THERE ARE MULTIPLE REDUCERS
 // Combine reducers 
 export default combineReducers({
-  contactReducer,
+  contactState: contactReducer,
   routing: routerReducer
 });

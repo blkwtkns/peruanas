@@ -15,9 +15,6 @@ import Notify from './NotifySubmission';
 import {
   connect
 } from 'react-redux';
-/* import {
- *   bindActionCreators
- * } from 'redux'; */
 import * as types from '../constants/actionTypes.js'
 import putFormAction from './contactActions'; 
 
@@ -37,26 +34,6 @@ class Contact extends Component {
       message: this.textInput.value,
     };
     this.props.submitForm(input);
-  }
-
-  componentDidMount(){
-    console.log('inside Contact component', this.props)
-  }
-
-  componentWillMount(){
-    console.log('inside componentWillMount', this.props)
-  }
-
-  componentWillReceiveProps(nextProps){
-    console.log('inside componentWillRecieveProps', nextProps)
-  }
-
-  shouldComponentUpdate(nextProps, nextState){
-    console.log('inside shouldComponentUpdate', nextProps, nextState)
-  }
-
-  componentWillUpdate(nextProps, nextState){
-    console.log('inside componentWillUpdate', nextProps, nextState)
   }
 
   render() {
@@ -118,7 +95,7 @@ class Contact extends Component {
 
       </form>
 
-      <Notify dbInfo={this.props.dbInfo}/>
+      <Notify dbInfo={this.props.contactState.dbInfo}/>
 
       <div className="committeeInfo">
         <h2>Committee Members</h2>
@@ -147,21 +124,9 @@ class Contact extends Component {
   };
 };
 
-const mapStateToProps = ({dbInfo}) => ({
-    dbInfo
+const mapStateToProps = ({contactState}) => ({
+    contactState
 })  
-
-/* const mapStateToProps = (state) => {
- *     return {
- *       dbInfo: state.contactReducer
- *     };
- * }  */
-
-
-// Wrap action creator with dispatch method.
-/* const mapDispatchToProps = dispatch => bindActionCreators({
- *   putFormAction
- * }, dispatch); */
 
 const mapDispatchToProps = dispatch => {
   return ({

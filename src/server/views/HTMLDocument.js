@@ -10,6 +10,7 @@ export default class Raices extends Component {
   }
 
   render() {
+    console.log('Raices class instance', this.props)
     return (
       <html>
         <head>
