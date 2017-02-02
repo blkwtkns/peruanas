@@ -11,23 +11,17 @@ import {
   Button
 } from 'react-bootstrap';
 import FieldGroup from './FieldGroup';
+import Notify from './NotifySubmission';
 import {
   connect
 } from 'react-redux';
-import {
-  bindActionCreators
-} from 'redux';
-import putFormAction from './contactActions';
+/* import {
+ *   bindActionCreators
+ * } from 'redux'; */
+import * as types from '../constants/actionTypes.js'
+import putFormAction from './contactActions'; 
 
 /* import './../styles/Contact.css'; */
-
-const SubmitValid = () => (
-     <div><h3 key='submitSuccess'>'Your submission was successful!'</h3></div> 
-)
-
-const SubmitInvalid = () => (
-  <div><h3 key='submitInvalid'>'Your submission was unsuccessful!'</h3></div>
-)
 
 class Contact extends Component {
   constructor(props) {
@@ -42,19 +36,30 @@ class Contact extends Component {
       email: this.emailInput.value,
       message: this.textInput.value,
     };
-    this.props.putFormAction(input);
+    this.props.submitForm(input);
   }
 
   componentDidMount(){
     console.log('inside Contact component', this.props)
   }
 
-  render() {
-    let submit  = null;
+  componentWillMount(){
+    console.log('inside componentWillMount', this.props)
+  }
 
-    /* if (dbInfo) {
-     *   submit = dbInfo === true ? <SubmitValid /> : <SubmitInvalid />;
-     * } */
+  componentWillReceiveProps(nextProps){
+    console.log('inside componentWillRecieveProps', nextProps)
+  }
+
+  shouldComponentUpdate(nextProps, nextState){
+    console.log('inside shouldComponentUpdate', nextProps, nextState)
+  }
+
+  componentWillUpdate(nextProps, nextState){
+    console.log('inside componentWillUpdate', nextProps, nextState)
+  }
+
+  render() {
 
     return (
       <section className="Contact">
@@ -113,7 +118,7 @@ class Contact extends Component {
 
       </form>
 
-      { submit }
+      <Notify dbInfo={this.props.dbInfo}/>
 
       <div className="committeeInfo">
         <h2>Committee Members</h2>
@@ -144,13 +149,24 @@ class Contact extends Component {
 
 const mapStateToProps = ({dbInfo}) => ({
     dbInfo
-})
+})  
 
+/* const mapStateToProps = (state) => {
+ *     return {
+ *       dbInfo: state.contactReducer
+ *     };
+ * }  */
 
 
 // Wrap action creator with dispatch method.
-const mapDispatchToProps = dispatch => bindActionCreators({
-  putFormAction
-}, dispatch);
+/* const mapDispatchToProps = dispatch => bindActionCreators({
+ *   putFormAction
+ * }, dispatch); */
+
+const mapDispatchToProps = dispatch => {
+  return ({
+    submitForm: input => dispatch(putFormAction(input))
+  })
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Contact);

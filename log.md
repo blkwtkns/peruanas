@@ -9,5 +9,5 @@
 * redux/redux-saga mosted fused, state is flowing through components correctly (also checkout react-router-redux)
 * get input from Erbelia
 * not rehydrating correctly on refresh (now it is, but verrry strange, might have been a module issue)
-* state not altering correctly
+* state not altering correctly: update - window state is undefined, and is being passed in configure store function, so it takes precedence over return of reducers. Codingbox isomorphic example has good solution to this.
 

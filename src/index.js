@@ -20,7 +20,7 @@ import routes from './routes';
 
 /* const store = configureStore(rootReducer); */
 
-/* console.log('window', window.__INITIAL_STATE__) */
+console.log('window', window.__INITIAL_STATE__) 
 
 const store = configureStore(window.__INITIAL_STATE__);
 
