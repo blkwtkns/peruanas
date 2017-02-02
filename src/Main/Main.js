@@ -6,7 +6,7 @@ import Header from './Header'
 
 if (process.env.WEBPACK) require('./main.scss');
 /* require('./main.scss'); */
-/* import './main.css'; */
+/* import './main.scss'; */
 
 class Main extends Component {
 
