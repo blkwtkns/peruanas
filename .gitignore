@@ -14,7 +14,7 @@ dist
 .DS_Store
 .env
 npm-debug.log
-# src/assets
+src/assets
 scratch.js
 
 # ignore lambdas for now
