@@ -5,12 +5,11 @@ import serialize from 'serialize-javascript';
 export const doctype = '<!doctype html>';
 
 export default class Raices extends Component {
-  static propTypes = {
-    state: PropTypes.object.isRequired
-  }
 
   render() {
     /* console.log('devHTML instance', this.props.state) */
+    const { state , assets} = this.props;
+    console.log(assets)
     return (
       <html>
         <head>
@@ -22,10 +21,11 @@ export default class Raices extends Component {
 
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"/>
+
         </head>
         <body>
           <div id="mount"></div> 
-          <script dangerouslySetInnerHTML={{__html: `window.__INITIAL_STATE__ = ${serialize(this.props.state)};`}} />
+          <script dangerouslySetInnerHTML={{__html: `window.__INITIAL_STATE__ = ${serialize(state)};`}} />
 
           <script src='bundle.js'></script>
           <script src="https://use.fontawesome.com/e076ed21e5.js"></script>
@@ -34,3 +34,7 @@ export default class Raices extends Component {
     );
   }
 }
+
+Raices.propTypes = {
+  store: React.PropTypes.object,
+};

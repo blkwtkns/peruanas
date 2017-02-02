@@ -70,8 +70,9 @@
   },
   "scripts": {
     "lint": "eslint ./src",
-    "start": "cross-env BABEL_ENV='node' NODE_ENV=development babel-node ./server.js",
-    "build": "rimraf dist && webpack --config ./webpack.config.prod.js",
-    "serve": "cross-env BABEL_ENV='node' NODE_ENV=production babel-node ./server.js"
+    "start": "cross-env BABEL_ENV='node' NODE_ENV=development babel-node ./bin/server.js",
+    "nodemon": "cross-env BABEL_ENV='node' NODE_ENV=development nodemon --exec babel-node ./bin/server.js",
+    "build": "rimraf dist && webpack --verbose --colors --display-error-details --config ./webpack/webpack.config.prod.js",
+    "serve": "cross-env BABEL_ENV='node' NODE_ENV=production babel-node ./bin/prod-server.js"
   }
 }

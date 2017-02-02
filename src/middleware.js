@@ -5,8 +5,8 @@ import {
 } from 'react-dom/server';
 import HTMLDocument, {
   doctype
-} from './server/views/HTMLDocument'
-import DevHTML from './server/views/DevHTML'
+} from './layouts/HTMLDocument'
+import DevHTML from './layouts/DevHTML'
 import configureStore from './configureStore'
 import {
   Provider
@@ -28,6 +28,10 @@ const renderDevHTML = (props) => {
 }
 
 export default (req, res) => {
+  if (process.env.NODE_ENV === 'development') {
+    webpackIsomorphicTools.refresh();
+  }
+
   const store = configureStore();
 
   match({
@@ -51,8 +55,10 @@ export default (req, res) => {
 
         if (process.env.NODE_ENV == 'development') {
 
+          const assets = webpackIsomorphicTools.assets();
           res.status(200).send(renderDevHTML({
-            state
+            state,
+            assets
           }));
 
         } else if (process.env.NODE_ENV == 'production') {

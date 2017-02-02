@@ -4,10 +4,12 @@ const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+const rootDir = path.resolve(__dirname, '..');
+
 module.exports = {
-	entry: path.resolve(__dirname, 'src'),
+	entry: path.resolve(rootDir, 'src'),
 	output: {
-		path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(rootDir, 'dist'),
 		filename: 'bundle.js',
 		publicPath: '/'
 	},
@@ -25,8 +27,8 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin([
 			{
-				from: path.resolve(__dirname, 'src', 'assets'),
-				to: path.resolve(__dirname, 'dist', 'assets')
+				from: path.resolve(rootDir, 'src', 'assets'),
+				to: path.resolve(rootDir, 'dist', 'assets')
 			}
 		]),
 		new ExtractTextPlugin('bundle.css')
@@ -36,12 +38,12 @@ module.exports = {
 			{ 
 				test: /\.js$/,
 				loader: 'babel',
-				include: path.resolve(__dirname, 'src')
+				include: path.resolve(rootDir, 'src')
 			},
 			{
 				test: /\.scss$/,
         loader: ExtractTextPlugin.extract('style', 'css!sass!postcss'),
-        /* include: path.resolve(__dirname, 'src') */
+        include: path.resolve(rootDir, 'src')
       },
       {
         test: /\.(ico|png|gif|jpg|svg)$/,

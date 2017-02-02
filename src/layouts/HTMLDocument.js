@@ -6,11 +6,11 @@ export const doctype = '<!doctype html>';
 export default class Raices extends Component {
   static propTypes = {
     state: PropTypes.object.isRequired,
-    html: PropTypes.string.isRequired
+    html: PropTypes.string.isRequired,
   }
 
   render() {
-    console.log('Raices class instance', this.props)
+    const { state, html } = this.props;
     return (
       <html>
         <head>
@@ -42,8 +42,8 @@ export default class Raices extends Component {
           <link rel="stylesheet" href="bundle.css"/>
         </head>
         <body>
-          <div id="mount" dangerouslySetInnerHTML={{__html: this.props.html}} />
-          <script dangerouslySetInnerHTML={{__html: `window.__INITIAL_STATE__ = ${JSON.stringify(this.props.state)};`}} />
+          <div id="mount" dangerouslySetInnerHTML={{__html: html}} />
+          <script dangerouslySetInnerHTML={{__html: `window.__INITIAL_STATE__ = ${JSON.stringify(state)};`}} />
 
           <script src='bundle.js'></script>
           <script src="https://use.fontawesome.com/e076ed21e5.js"></script>
