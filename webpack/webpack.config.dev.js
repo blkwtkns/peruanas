@@ -59,6 +59,14 @@ module.exports = {
         loader: 'url?limit=10000&mimetype=image/svg+xml',
       },
       {
+        test: /\.png(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=image/svg+xml',
+      },
+      {
+        test: /\.jpg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=image/svg+xml',
+      },
+      {
         test: webpackIsomorphicToolsPlugin.regular_expression('images'),
         loader: 'url-loader?limit=10240',
       },

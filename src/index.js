@@ -23,8 +23,8 @@ import routes from './routes';
  *     });
  *   } */
 
-const dest = global.document.getElementById('mount');
-const store = configureStore(browserHistory, window.__INITIAL_STATE__);
+const dest = document.getElementById('mount');
+const store = configureStore(browserHistory, window.__data);
 store.runSaga(rootSaga)
 const history = syncHistoryWithStore(browserHistory, store);
 

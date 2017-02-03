@@ -3,15 +3,12 @@ import path from 'path';
 import favicon from 'serve-favicon';
 import { port } from '../config/env'
 import React from 'react';
-import ReactDOM from 'react-dom/server';
-/* import {
- *   renderToString,
- *   renderToStaticMarkup
- * } from 'react-dom/server'; */
-/* import HTMLDocument, {
- *   doctype
- * } from './layouts/HTMLDocument'
- * import DevHTML from './layouts/DevHTML' */
+/* import ReactDOM from 'react-dom/server'; */
+import {
+    renderToString,
+    renderToStaticMarkup
+} from 'react-dom/server';
+import { doctype } from './layouts/HTMLDocument';
 import TestHTML from './layouts/testHTML';
 import { configureStore } from './configureStore'
 import {
@@ -31,17 +28,6 @@ app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.ico', 'favicon.ico
 
 app.use('/', express.static(path.resolve(__dirname, '../public')));
 
-
-
-/* const renderApplication = (props) => {
- *   return doctype + renderToStaticMarkup(<HTMLDocument { ...props} />);
- * }
- * 
- * const renderDevHTML = (props) => {
- *   return doctype + renderToStaticMarkup(<DevHTML {...props} />);
- * } */
-
-/* export default (req, res) => { */
 app.use( (req, res) => {
   if (process.env.NODE_ENV === 'development') {
     webpackIsomorphicTools.refresh();
@@ -52,7 +38,7 @@ app.use( (req, res) => {
   const history = syncHistoryWithStore(memoryHistory, store);
 
   function hydrateOnClient() {
-    res.send(`<!doctype html>${ReactDOM.renderToString(<TestHTML assets={webpackIsomorphicTools.assets()} state={store} />)}`);
+    res.send(doctype + renderToString(<TestHTML assets={webpackIsomorphicTools.assets()} state={store} />));
   }
 
   match({
@@ -74,29 +60,11 @@ app.use( (req, res) => {
 
       store.runSaga(rootSaga).done.then(() => {
         const state = store.getState();
-        /* console.log('runSaga on middleware', state) */
 
-        /* if (process.env.NODE_ENV == 'development') { */
-
-          /* const assets = webpackIsomorphicTools.assets(); */
-          /* res.status(200).send(renderDevHTML({
-           *   state,
-           *   assets
-           * })); */
-
-        /* } else if (process.env.NODE_ENV == 'production') { */
-
-        //const html = renderToString(rootComponent);
-          /* res.status(200).send(renderApplication({
-           *   state,
-           *   html
-           * })); */
-
-        //}
-        res.status(200).send(`<!doctype html>${ReactDOM.renderToStaticMarkup(<Default assets={webpackIsomorphicTools.assets()} component={rootComponent} state={state} />)}`);
+        res.status(200).send(doctype + renderToStaticMarkup(<TestHTML assets={webpackIsomorphicTools.assets()} component={rootComponent} state={state} />));
       })
 
-      /* renderToString(rootComponent) */
+      renderToString(rootComponent)
       store.close();
 
     } else {

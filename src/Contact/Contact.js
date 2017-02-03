@@ -37,6 +37,8 @@ class Contact extends Component {
   }
 
   render() {
+    /* console.log('contact component', this.props) */
+    
 
     return (
       <section className="Contact">
@@ -95,7 +97,7 @@ class Contact extends Component {
 
       </form>
 
-      <Notify dbInfo={this.props.contactState.dbInfo}/>
+      <Notify dbInfo={this.props.dbInfo}/>
 
       <div className="committeeInfo">
         <h2>Committee Members</h2>
@@ -124,8 +126,8 @@ class Contact extends Component {
   };
 };
 
-const mapStateToProps = ({contactState}) => ({
-    contactState
+const mapStateToProps = ({state}) => ({
+   dbInfo: state.contactState.dbInfo 
 })  
 
 const mapDispatchToProps = dispatch => {

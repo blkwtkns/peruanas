@@ -21,7 +21,7 @@ const createStoreWithReducer = (history, data, reducer) => {
 
   const store = createStore(
       rootReducer,
-      initialState,
+      data,
       applyMiddleware(...middleware)
     );
   
