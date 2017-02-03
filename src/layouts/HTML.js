@@ -8,6 +8,9 @@ export default class Raices extends Component {
     const { assets, component, state } = this.props;
     const content = component ? ReactDOMServer.renderToString(component) : '';
 
+          /* <link rel="icon" type="image/png" sizes="16x16" href={icon}/> */
+    const logo = require('../assets/image1-small-23.png'); 
+
     return (
       <html lang="en">
         <head>
@@ -17,13 +20,8 @@ export default class Raices extends Component {
 
           <title>Raices Peruanas - Peruvian Dance, Music, and Culture</title>
 
-          <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png"/>
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-          <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png"/>
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
           <link rel="manifest" href="/manifest.json"/>
           <meta name="msapplication-TileColor" content="#ffffff"/>
-          <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
           <meta name="theme-color" content="#ffffff"/>
 
           {/* production */}
@@ -47,6 +45,7 @@ export default class Raices extends Component {
 
         </head>
         <body>
+          <img src={logo}/>
           <div id="mount" dangerouslySetInnerHTML={{ __html: content }} />
           <script
             dangerouslySetInnerHTML={{ __html: `window.__data=${serialize(state)};` }}

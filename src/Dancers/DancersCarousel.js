@@ -1,21 +1,20 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
-/* import './../styles/DancersCarousel.css' */
-/* import gazers from './../assets/dancers-gaze.jpg';
- * import bow from './../assets/foto8.jpg';
- * import bigSmile from './../assets/foto21.jpg'; */
+const gazers = require('./../assets/dancers-gaze.jpg');
+const bow = require('./../assets/foto8.jpg');
+const bigSmile = require('./../assets/foto21.jpg');
 
 
 const DancersCarousel = () => (
   <Carousel className="DancersCarousel">
     <Carousel.Item>
-      <Image src={ process.env.WEBPACK ? require('./../assets/dancers-gaze.jpg') : './assets/dancers-gaze.jpg' } responsive/>
+      <Image src={ gazers } responsive/>
     </Carousel.Item>
     <Carousel.Item>
-      <Image src={ process.env.WEBPACK ? require('./../assets/foto8.jpg') : './assets/foto8.jpg'  } responsive/>
+      <Image src={ bow } responsive/>
     </Carousel.Item>
     <Carousel.Item>
-      <Image src={ process.env.WEBPACK ? require('./../assets/foto21.jpg') : './assets/foto21.jpg'  } responsive/>
+      <Image src={ bigsmile } responsive/>
     </Carousel.Item>
   </Carousel>
 );

@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
-import favicon from 'serve-favicon';
+/* import favicon from 'serve-favicon'; */
+import favicons from 'connect-favicons';
 import { port } from '../config/env'
 import React from 'react';
 /* import ReactDOM from 'react-dom/server'; */
@@ -25,9 +26,9 @@ import routes from './routes';
 
 const doctype = '<!DOCTYPE html>'
 const app = express();
-app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.ico', 'favicon.ico')));
 
-app.use('/', express.static(path.resolve(__dirname, '../public')));
+app.use(favicons(path.join(__dirname, '..', 'public', 'favicon.ico')));
+app.use('/', express.static(path.join(__dirname, '..', 'public')));
 
 app.use( (req, res) => {
   if (process.env.NODE_ENV === 'development') {

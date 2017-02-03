@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
-/* import './../styles/HistCarousel.css' */
+
 const gazers = require('./../assets/dancers-gaze.jpg');
 const bow = require('./../assets/foto8.jpg');
 const bigSmile = require('./../assets/foto21.jpg');

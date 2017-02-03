@@ -9,17 +9,17 @@ import {
   Nav
 } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
-/* import logo from '../assets/image1-small-23.png';  */
-/* import './../styles/Main.css'; */
+
+const logo = require('../assets/image1-small-23.png'); 
 
 class Header extends Component {
   render(){
-    return (
 
+    return (
       <Navbar fluid fixedTop collapseOnSelect className="navMain">
         <Navbar.Header>
           <Navbar.Brand>
-            <Image className="raicesLogo" src={ process.env.WEBPACK ? require('../assets/image1-small-23.png') : './assets/image1-small-23.png'} circle/>
+            <Image className="raicesLogo" src={ logo } circle/>
             <span className='title'>RaicesPeruanas</span>
           </Navbar.Brand>
           <Navbar.Toggle />
