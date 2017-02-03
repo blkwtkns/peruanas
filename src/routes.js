@@ -9,13 +9,14 @@ import Dances from './Dances/Dances'
 import Dancers from './Dancers/Dancers'
 import Photos from './Photos/Photos'
 import Contact from './Contact/Contact'
-import NotFound from './NotFound';
+/* import NotFound from './NotFound'; */
 
 import styles from './Main/main.css';
 /* import bigSmile from './assets/dancers-gaze.jpg'
  * import gazers from './assets/foto8.jpg'
  * import gangsta from './assets/foto21.jpg'
  * import logo from './assets/image1-small-23.png' */
+/* <Route path="*" component={NotFound} status={404} /> */
 
 export default (store) => {
   return (
@@ -27,7 +28,6 @@ export default (store) => {
       <Route path="dancers" component={Dancers} />
       <Route path="photos" component={Photos} />
       <Route path="contact" component={Contact}/>
-      <Route path="*" component={NotFound} status={404} />
     </Route>
   )
 };

@@ -4,13 +4,13 @@ import favicon from 'serve-favicon';
 import { port } from '../config/env'
 import React from 'react';
 /* import ReactDOM from 'react-dom/server'; */
-import {
-    renderToString,
-    renderToStaticMarkup
-} from 'react-dom/server';
-import { doctype } from './layouts/HTMLDocument';
-import TestHTML from './layouts/testHTML';
-import { configureStore } from './configureStore'
+/* import {
+ *     renderToString,
+ *     renderToStaticMarkup
+ * } from 'react-dom/server'; */
+import ReactDOMServer from 'react-dom/server';
+import HTML from './layouts/HTML';
+import configureStore from './configureStore'
 import {
   Provider
 } from 'react-redux';
@@ -23,6 +23,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 import rootSaga from './sagas/rootSaga'
 import routes from './routes';
 
+const doctype = '<!DOCTYPE html>'
 const app = express();
 app.use(favicon(path.join(__dirname, '..', 'public', 'favicon.ico', 'favicon.ico')));
 
@@ -38,7 +39,7 @@ app.use( (req, res) => {
   const history = syncHistoryWithStore(memoryHistory, store);
 
   function hydrateOnClient() {
-    res.send(doctype + renderToString(<TestHTML assets={webpackIsomorphicTools.assets()} state={store} />));
+    res.send(doctype + ReactDOMServer.renderToString(<HTML assets={webpackIsomorphicTools.assets()} state={store} />));
   }
 
   match({
@@ -61,10 +62,10 @@ app.use( (req, res) => {
       store.runSaga(rootSaga).done.then(() => {
         const state = store.getState();
 
-        res.status(200).send(doctype + renderToStaticMarkup(<TestHTML assets={webpackIsomorphicTools.assets()} component={rootComponent} state={state} />));
+        res.status(200).send(doctype + ReactDOMServer.renderToStaticMarkup(<HTML assets={webpackIsomorphicTools.assets()} component={rootComponent} state={state} />));
       })
 
-      renderToString(rootComponent)
+      ReactDOMServer.renderToString(rootComponent)
       store.close();
 
     } else {
