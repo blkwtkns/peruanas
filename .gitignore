@@ -17,6 +17,7 @@ npm-debug.log
 src/assets
 scratch.js
 public
+webpack-assets.json
 
 # ignore lambdas for now
 lambdas
