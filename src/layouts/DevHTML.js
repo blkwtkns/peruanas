@@ -8,7 +8,7 @@ export default class Raices extends Component {
 
   render() {
     /* console.log('devHTML instance', this.props.state) */
-    const { state , assets} = this.props;
+    const { state , assets } = this.props;
     console.log(assets)
     return (
       <html>

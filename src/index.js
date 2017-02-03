@@ -1,8 +1,6 @@
 // ./src/index.js
 import React from 'react';
-import {
-  render
-} from 'react-dom';
+import ReactDOM from 'react-dom';
 import {
   match,
   Router,
@@ -17,25 +15,46 @@ import rootReducer from './rootReducer';
 import rootSaga from './sagas/rootSaga'
 import routes from './routes';
 
-/* console.log('window', window.__INITIAL_STATE__)  */
+/* const store = configureStore(window.__INITIAL_STATE__); */
 
-const store = configureStore(window.__INITIAL_STATE__);
+/* if (process.env.NODE_ENV == 'development' && module.hot) {
+ *     module.hot.accept('./rootReducer', () => {
+ *       store.replaceReducer(require('./rootReducer').default);
+ *     });
+ *   } */
 
-if (process.env.NODE_ENV == 'development' && module.hot) {
-    module.hot.accept('./rootReducer', () => {
-      store.replaceReducer(require('./rootReducer').default);
-    });
-  }
-
+const dest = global.document.getElementById('mount');
+const store = configureStore(browserHistory, window.__INITIAL_STATE__);
 store.runSaga(rootSaga)
 const history = syncHistoryWithStore(browserHistory, store);
 
-match({history, routes}, (error, redirect, props) => {
-  render(
-    <Provider store={store}>
-      <Router {...props} />
-    </Provider>,
-    document.getElementById('mount')
-  );
-})
+const component = (
+  <Router history={history}>
+    {routes(store)}
+  </Router>
+)
+
+ReactDOM.render(
+  <Provider store={store} key="provider">
+    {component}
+  </Provider>,
+  dest
+)
+
+if (process.env.NODE_ENV !== 'production') {
+  global.React = React; // enable debugger
+
+  if (!dest || !dest.firstChild || !dest.firstChild.attributes || !dest.firstChild.attributes['data-react-checksum']) {
+    console.error('Server-side React render was discarded. Make sure that your initial render does not contain any client-side code.');
+  }
+}
+
+/* match({history, routes}, (error, redirect, props) => {
+ *   render(
+ *     <Provider store={store}>
+ *       <Router {...props} />
+ *     </Provider>,
+ *     document.getElementById('mount')
+ *   );
+ * }) */
 

@@ -1,9 +1,10 @@
-import path from 'path';
+/* import path from 'path'; */
 import express from 'express';
 import webpack from 'webpack';
-import middleware from '../src/middleware';
+const { host, port, webpackPort } = require('../config/env');
+/* import middleware from '../src/middleware'; */
 
-const app = express();
+/* const rootDir = path.resolve(__dirname, '..'); */
 
 const config = require('../webpack/webpack.config.dev');
 const compiler = webpack(config);
@@ -26,18 +27,17 @@ const serverOptions = {
   }
 };
 
+const app = express();
+
 app.use(require('webpack-dev-middleware')(compiler, serverOptions));
 app.use(require('webpack-hot-middleware')(compiler));
-app.use(express.static(path.resolve(__dirname, 'src')));
+/* app.get('*', middleware);
+ * app.use(express.static(path.resolve(rootDir, 'src'))); */
 
-
-
-app.get('*', middleware);
-
-app.listen(3000, '0.0.0.0', (err) => {
+app.listen(webpackPort, (err) => {
   if(err) {
     console.error(err);
   } else {
-    console.info('Listening at http://localhost:3000');	
+    console.info(`Webpack development server listening on port ${webpackPort}`);	
   }
 });
