@@ -8,7 +8,7 @@ const bigSmile = require('./../assets/foto21.jpg');
 const HomeCarousel = () => {
 
   const HomeItems = [gazers, bow, bigSmile].map((pic, i) => {
-    return <Carousel.Item><Image src={pic} key={`HomeItem${i}`} responsive/></Carousel.Item>
+    return <Carousel.Item key={i}><Image src={pic} key={i} responsive/></Carousel.Item>
   })
 
   return (

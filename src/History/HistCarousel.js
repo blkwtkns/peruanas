@@ -8,13 +8,13 @@ const bigSmile = require('./../assets/foto21.jpg');
 
 const HistCarousel = (props) => {
   
-  const carouselItems = [gazers, bow, bigSmile].map(pic => {
-    return <Carousel.Item><Image src={pic} responsive/></Carousel.Item>
+  const HistoryItems = [gazers, bow, bigSmile].map((pic, i) => {
+    return <Carousel.Item key={i}><Image src={pic} key={i} responsive/></Carousel.Item>
   })
 
   return (
   <Carousel className="HistCarousel">
-    {carouselItems} 
+    {HistoryItems} 
   </Carousel>
   );
 }
