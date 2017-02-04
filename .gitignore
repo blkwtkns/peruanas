@@ -16,6 +16,8 @@ dist
 npm-debug.log
 src/assets
 scratch.js
+public
+stats
 
 # ignore lambdas for now
 lambdas
