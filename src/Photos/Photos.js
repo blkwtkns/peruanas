@@ -2,7 +2,6 @@
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
 import PhotosCarousel from './PhotosCarousel';
-/* import './../styles/Photos.css'; */
 
 
 const Photos = () => (

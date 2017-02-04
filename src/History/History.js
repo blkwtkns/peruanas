@@ -5,11 +5,11 @@ import HistCarousel from './HistCarousel';
 /* import './../styles/History.css'; */
 
 
-const History = () => (
+const History = (props) => (
 
     <section className="historySection">
     <Jumbotron className="History"> 
-      <HistCarousel />
+      <HistCarousel pics={props.pics}/>
     </Jumbotron>
     <div className="supporting">
       <div className="containter-fluid">
