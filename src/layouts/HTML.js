@@ -9,7 +9,6 @@ export default class Raices extends Component {
     const content = component ? ReactDOMServer.renderToString(component) : '';
 
           /* <link rel="icon" type="image/png" sizes="16x16" href={icon}/> */
-    const logo = require('../assets/image1-small-23.png'); 
 
     return (
       <html lang="en">
@@ -23,6 +22,9 @@ export default class Raices extends Component {
           <link rel="manifest" href="/manifest.json"/>
           <meta name="msapplication-TileColor" content="#ffffff"/>
           <meta name="theme-color" content="#ffffff"/>
+
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"/>
 
           {/* production */}
           {Object.keys(assets.styles).map((style, key) =>
@@ -40,12 +42,8 @@ export default class Raices extends Component {
             null
           }
 
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"/>
-
         </head>
         <body>
-          <img src={logo}/>
           <div id="mount" dangerouslySetInnerHTML={{ __html: content }} />
           <script
             dangerouslySetInnerHTML={{ __html: `window.__data=${serialize(state)};` }}
