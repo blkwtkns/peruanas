@@ -14,15 +14,15 @@ import Header from './Header'
 class Main extends Component {
 
   render(){
-    const childrenWithProps = React.Children.map(this.props.children,
-          (child) => React.cloneElement(child, {pics: this.props.pics})
-        );
+    /* const childrenWithProps = React.Children.map(this.props.children,
+     *       (child) => React.cloneElement(child, {pics: this.props.pics})
+     *     ); */
 
     return (
       <section>
         <Header />
         <div className="container-fluid">
-           { childrenWithProps }
+          { this.props.children }
         </div>
         <Footer />
       </section>

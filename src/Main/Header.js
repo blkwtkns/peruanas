@@ -8,25 +8,30 @@ import {
   NavItem,
   Nav
 } from 'react-bootstrap';
+import NavBrand from './NavBrand';
 import { LinkContainer } from 'react-router-bootstrap';
 
-const logo = require('../assets/image1-small-23.png'); 
+/* const logo = require('../assets/image1-small-23.png');  */
 
 class Header extends Component {
   render(){
 
     return (
       <Navbar fluid fixedTop collapseOnSelect className="navMain">
-        <Navbar.Header>
+        {/* <Navbar.Header>
           <Navbar.Brand>
-            <Image className="raicesLogo" src={ logo } circle/>
-            <span className='title'>RaicesPeruanas</span>
+            <LinkContainer to="/">
+              <a href="#">
+                <Image className="raicesLogo" src={ logo } circle/> 
+                <span className='title'>RaicesPeruanas</span>
+              </a>
+            </LinkContainer>
           </Navbar.Brand>
           <Navbar.Toggle />
-        </Navbar.Header>
+        </Navbar.Header> */}
+        <NavBrand />
         <Navbar.Collapse>
           <Nav pullRight className="links">
-            <LinkContainer to="/"><NavItem eventKey={1} href="#" >Home</NavItem></LinkContainer>
             <LinkContainer to="news"><NavItem eventKey={2} href="#">News</NavItem></LinkContainer>
             <LinkContainer to="dances"><NavItem eventKey={3} href="#">Dances</NavItem></LinkContainer>
             <LinkContainer to="photos"><NavItem eventKey={4} href="#">Photos</NavItem></LinkContainer>
