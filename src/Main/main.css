@@ -161,11 +161,35 @@ a {
 }
 
 .directs {
+  /* font-family: 'Open Sans', sans-serif; */
+}
+
+.links {
+  display: inline-flex;
+}
+
+.routeLinks {
+  display: inherit;
+  margin: 1.5rem 1rem;
+}
+
+.routeLinks > li > a {
+  color: red;
   font-family: 'Open Sans', sans-serif;
+  margin: 0 1rem;
+  font-size: larger;
+}
+
+/* for mobile hamburger menu button */
+.navbar-default .navbar-toggle:hover {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-toggle {
+  border-color: #ffffff;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: red;
+  /* color: red; */
 }
 
 .socials {
@@ -174,6 +198,15 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
+
+  .links {
+    display: initial;
+  }
+
+  .routeLinks > li {
+    margin-top: 1em;
+  }
+
   .raicesLogo {
     width: 2em; 
     height: 2em;
