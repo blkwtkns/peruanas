@@ -15,14 +15,6 @@ import rootReducer from './rootReducer';
 import rootSaga from './sagas/rootSaga'
 import routes from './routes';
 
-/* const store = configureStore(window.__INITIAL_STATE__); */
-
-/* if (process.env.NODE_ENV == 'development' && module.hot) {
- *     module.hot.accept('./rootReducer', () => {
- *       store.replaceReducer(require('./rootReducer').default);
- *     });
- *   } */
-
 const dest = document.getElementById('mount');
 const store = configureStore(browserHistory, window.__data);
 store.runSaga(rootSaga)
@@ -48,13 +40,3 @@ if (process.env.NODE_ENV !== 'production') {
     console.error('Server-side React render was discarded. Make sure that your initial render does not contain any client-side code.');
   }
 }
-
-/* match({history, routes}, (error, redirect, props) => {
- *   render(
- *     <Provider store={store}>
- *       <Router {...props} />
- *     </Provider>,
- *     document.getElementById('mount')
- *   );
- * }) */
-
