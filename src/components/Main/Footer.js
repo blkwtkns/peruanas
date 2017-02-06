@@ -1,9 +1,7 @@
 // ./src/Main/Footer.js
 import React from 'react';
 
-/* import './../styles/Main.css'; */
-
-const Footer = () => (
+const Footer = (props) => (
   <footer className="footer">
     <div className="containter">
       <p>RaicesPeruanas.com © Copyright 2004 -2013</p>

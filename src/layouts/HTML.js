@@ -38,7 +38,7 @@ export default class Raices extends Component {
           {/* development */}
           {
             Object.keys(assets.styles).length === 0 ?
-              <style dangerouslySetInnerHTML={{ __html: require('../Main/main.css')._style }} /> :
+              <style dangerouslySetInnerHTML={{ __html: require('../components/Main/main.css')._style }} /> :
             null
           }
 

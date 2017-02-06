@@ -7,10 +7,6 @@ import { routerMiddleware } from 'react-router-redux';
 import createLogger from 'redux-logger'
 import rootReducer from './rootReducer'; 
 
-  
-
-  
-
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [sagaMiddleware];
 

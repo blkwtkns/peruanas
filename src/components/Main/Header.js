@@ -10,21 +10,21 @@ import NavBrand from './NavBrand';
 import RouteLinks from './RouteLinks';
 import SocialLinks from './SocialLinks';
 
-class Header extends Component {
-  render(){
+/* class Header extends Component {
+ *   render(){ */
 
-    return (
-      <Navbar fluid fixedTop collapseOnSelect className="navMain">
-        <NavBrand />
-        <Navbar.Collapse>
-          <Nav pullRight className="links">
+const Header = (props) => {
+  return (
+    <Navbar fluid fixedTop collapseOnSelect className="navMain">
+      <NavBrand />
+      <Navbar.Collapse>
+        <Nav pullRight className="links">
           <RouteLinks />
           <SocialLinks />
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    );
-  };
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
 };
 
 export default Header;

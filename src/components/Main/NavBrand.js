@@ -4,8 +4,9 @@ import {
   Navbar,
 } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import { logos } from '../../constants/photoState';
 
-const logo = require('../assets/image1-small-23.png'); 
+/* const logo = require('../assets/image1-small-23.png');  */
 
 /* class Header extends Component { */
 const NavBrand = (props) => {
@@ -15,7 +16,7 @@ const NavBrand = (props) => {
       <Navbar.Brand>
         <LinkContainer to="/">
           <a href="#">
-            <Image className="raicesLogo" src={ logo } circle/> 
+            <Image className="raicesLogo" src={ logos[0] } circle/> 
             <span className='title'>RaicesPeruanas</span>
           </a>
         </LinkContainer>

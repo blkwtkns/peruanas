@@ -1,8 +1,8 @@
 // ./src/components/Photos.js
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import ImageCarousel from '../components/ImageCarousel';
-import { photos } from '../constants/photoState';
+import ImageCarousel from '../ImageCarousel';
+import { photos } from '../../constants/photoState';
 
 
 const Photos = (props) => (

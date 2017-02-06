@@ -1,14 +1,9 @@
 import express from 'express';
 import path from 'path';
-/* import favicon from 'serve-favicon'; */
 import favicons from 'connect-favicons';
 import { port } from '../config/env'
 import React from 'react';
 /* import ReactDOM from 'react-dom/server'; */
-/* import {
- *     renderToString,
- *     renderToStaticMarkup
- * } from 'react-dom/server'; */
 import ReactDOMServer from 'react-dom/server';
 import HTML from './layouts/HTML';
 import configureStore from './configureStore'

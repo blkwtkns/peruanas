@@ -1,3 +1,8 @@
+export const logos = [
+  require('./../assets/image1-small-23.png'),
+  require('./../assets/consulado_del_peru_logo.jpg'),
+];
+
 export const images = [
   require('./../assets/machupicchu_thumb.jpg'),
   require('./../assets/machu-picchu-travel.jpg'),

@@ -15,7 +15,7 @@ import Notify from './NotifySubmission';
 import {
   connect
 } from 'react-redux';
-import * as types from '../constants/actionTypes.js'
+import * as types from '../../constants/actionTypes.js'
 import putFormAction from './contactActions'; 
 
 /* import './../styles/Contact.css'; */

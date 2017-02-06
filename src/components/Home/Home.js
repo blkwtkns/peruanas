@@ -1,12 +1,9 @@
 // ./src/components/Home.js
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-/* import './../styles/Home.css'; */
 import About from './About';
-/* import HomeCarousel from './HomeCarousel'; */
-
-import { images } from '../constants/photoState';
-import ImageCarousel from '../components/ImageCarousel';
+import { images } from '../../constants/photoState';
+import ImageCarousel from '../ImageCarousel';
 
 const Home = (props) => (
   <section>

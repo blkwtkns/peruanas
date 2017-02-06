@@ -1,9 +1,9 @@
-import {
-  photos,
-  dancers,
-  history,
-  presentations
-} from './photoState';
+/* import {
+ *   photos,
+ *   dancers,
+ *   history,
+ *   presentations
+ * } from './photoState'; */
 
 export default {
   shared: {
@@ -12,11 +12,7 @@ export default {
       './assets/foto8.jpg',
       './assets/foto21.jpg',
       './assets/image1-small-23.png'
-    ],
-    photosPage: photos,
-    dancersPage: dancers,
-    historyPage: history,
-    presentationsPage: presentations
+    ]
   },
   contactState: {
     dbInfo: false

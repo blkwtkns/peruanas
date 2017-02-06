@@ -1,6 +1,5 @@
 // ./src/components/News.js
 import React, { Component } from 'react';
-/* import './../styles/App.css'; */
 
 class News extends Component {
   render() {
