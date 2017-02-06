@@ -1,19 +1,17 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
+import { photos } from '../constants/photoState';
 
-const gazers = require('./../assets/dancers-gaze.jpg');
-const bow = require('./../assets/foto8.jpg');
-const bigSmile = require('./../assets/foto21.jpg');
 
-const PhotosCarousel = () => {
-const PhotoItems = [gazers, bow, bigSmile].map((pic, i) => {
-    return <Carousel.Item key={i}><Image src={pic} key={i} responsive/></Carousel.Item>
-  })
+const PhotosCarousel = (props) => {
+  return (
+    <Carousel className="PhotosCarousel">
 
-return (
-  <Carousel className="PhotosCarousel">
-    { PhotoItems }
-  </Carousel>
-);
+      { photos.map((pic, i) => {
+        return <Carousel.Item key={i}><Image src={pic} key={i} responsive/></Carousel.Item>
+      }) }
+
+    </Carousel>
+  );
 }
 export default PhotosCarousel;
