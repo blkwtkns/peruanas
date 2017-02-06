@@ -1,15 +1,16 @@
 // ./src/components/History.js
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import HistCarousel from './HistCarousel';
-/* import './../styles/History.css'; */
+/* import HistCarousel from './HistCarousel'; */
 
+import ImageCarousel from '../components/ImageCarousel';
+import { history } from '../constants/photoState';
 
 const History = (props) => (
 
     <section className="historySection">
     <Jumbotron className="History"> 
-      <HistCarousel pics={props.pics}/>
+      <ImageCarousel clName={'HistCarousel'} images={history}/>
     </Jumbotron>
     <div className="supporting">
       <div className="containter-fluid">

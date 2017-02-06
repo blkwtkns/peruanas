@@ -1,3 +1,15 @@
+export const images = [
+  require('./../assets/machupicchu_thumb.jpg'),
+  require('./../assets/machu-picchu-travel.jpg'),
+  require('./../assets/consuladoA.jpg'),
+  require('./../assets/dancers-gaze.jpg'),
+  require('./../assets/fot12.jpg'),
+  require('./../assets/fot13-960px.jpg'),
+  require('./../assets/foto21.jpg'),
+  require('./../assets/foto8.jpg'),
+  require('./../assets/presentaciones.jpg'),
+];
+
 export const photos = [
   require('./../assets/photos/aprilfestejos.jpg'),
   require('./../assets/photos/consuladoA.jpg'),

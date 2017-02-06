@@ -1,17 +1,15 @@
 import React from 'react';
 import { Carousel, Image } from 'react-bootstrap';
-import { photos } from '../constants/photoState';
 
-
-const PhotosCarousel = (props) => {
+const ImageCarousel = (props) => {
   return (
-    <Carousel className="PhotosCarousel">
+    <Carousel className={props.clName}>
 
-      { photos.map((pic, i) => {
+      { props.images.map((pic, i) => {
         return <Carousel.Item key={i}><Image src={pic} key={i} responsive/></Carousel.Item>
       }) }
 
     </Carousel>
   );
 }
-export default PhotosCarousel;
+export default ImageCarousel;

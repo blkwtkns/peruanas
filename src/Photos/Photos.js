@@ -1,13 +1,14 @@
 // ./src/components/Photos.js
 import React from 'react';
 import { Jumbotron } from 'react-bootstrap';
-import PhotosCarousel from './PhotosCarousel';
+import ImageCarousel from '../components/ImageCarousel';
+import { photos } from '../constants/photoState';
 
 
-const Photos = () => (
+const Photos = (props) => (
 
   <Jumbotron className="Dancers">
-    <PhotosCarousel />
+    <ImageCarousel clName={'PhotosCarousel'} images={photos} />
   </Jumbotron>
       
 );
