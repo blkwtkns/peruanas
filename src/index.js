@@ -1,42 +1,79 @@
-// ./src/index.js
+import express from 'express';
+import path from 'path';
+import favicons from 'connect-favicons';
+import { port } from '../config/env'
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {
-  match,
-  Router,
-  browserHistory
-} from 'react-router';
+/* import ReactDOM from 'react-dom/server'; */
+import ReactDOMServer from 'react-dom/server';
+import HTML from './layouts/HTML';
+import configureStore from './configureStore'
 import {
   Provider
 } from 'react-redux';
+import {
+  match,
+  RouterContext,
+} from 'react-router';
+import createHistory from 'react-router/lib/createMemoryHistory';
 import { syncHistoryWithStore } from 'react-router-redux';
-import configureStore from './configureStore';
-import rootReducer from './rootReducer'; 
 import rootSaga from './sagas/rootSaga'
 import routes from './routes';
 
-const dest = document.getElementById('mount');
-const store = configureStore(browserHistory, window.__data);
-store.runSaga(rootSaga)
-const history = syncHistoryWithStore(browserHistory, store);
+const doctype = '<!DOCTYPE html>'
+const app = express();
 
-const component = (
-  <Router history={history}>
-    {routes(store)}
-  </Router>
-)
+app.use(favicons(path.join(__dirname, '..', 'public', 'favicon.ico')));
+app.use('/', express.static(path.join(__dirname, '..', 'public')));
 
-ReactDOM.render(
-  <Provider store={store} key="provider">
-    {component}
-  </Provider>,
-  dest
-)
-
-if (process.env.NODE_ENV !== 'production') {
-  global.React = React; // enable debugger
-
-  if (!dest || !dest.firstChild || !dest.firstChild.attributes || !dest.firstChild.attributes['data-react-checksum']) {
-    console.error('Server-side React render was discarded. Make sure that your initial render does not contain any client-side code.');
+app.use( (req, res) => {
+  if (process.env.NODE_ENV === 'development') {
+    webpackIsomorphicTools.refresh();
   }
-}
+
+  const memoryHistory = createHistory(req.originalUrl);
+  const store = configureStore(memoryHistory);
+  const history = syncHistoryWithStore(memoryHistory, store);
+
+  function hydrateOnClient() {
+    res.send(doctype + ReactDOMServer.renderToString(<HTML assets={webpackIsomorphicTools.assets()} state={store} />));
+  }
+
+  match({
+    history,
+    routes: routes(store),
+    location: req.url
+  }, (error, redirect, props) => {
+    if (error) {
+      res.status(500).send(error.message);
+      hydrateOnClient();
+    } else if (redirect) {
+      res.redirect(302, redirect.pathname + redirect.search);
+    } else if (props) {
+      const rootComponent = (
+        <Provider store={store} key="provider">
+            <RouterContext {...props}/>
+          </Provider>
+      );
+
+      store.runSaga(rootSaga).done.then(() => {
+        const state = store.getState();
+
+        res.status(200).send(doctype + ReactDOMServer.renderToStaticMarkup(<HTML assets={webpackIsomorphicTools.assets()} component={rootComponent} state={state} />));
+      })
+
+      ReactDOMServer.renderToString(rootComponent)
+      store.close();
+
+    } else {
+      res.status(404).send('Not found');
+    }
+  });
+});
+
+app.listen(port, (err) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.info(`Server listening on port ${port}!`);
+  }
+});

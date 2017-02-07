@@ -18,7 +18,7 @@ module.exports = {
   context: path.resolve(__dirname, '..'),
   entry: {
     main: [
-      './src/index.js',
+      './src/client.js',
     ],
   },
   output: {

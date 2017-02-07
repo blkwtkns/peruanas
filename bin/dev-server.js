@@ -1,10 +1,7 @@
-/* import path from 'path'; */
 import express from 'express';
 import webpack from 'webpack';
 const { host, port, webpackPort } = require('../config/env');
-/* import middleware from '../src/middleware'; */
 
-/* const rootDir = path.resolve(__dirname, '..'); */
 
 const config = require('../webpack/webpack.config.dev');
 const compiler = webpack(config);
@@ -31,8 +28,6 @@ const app = express();
 
 app.use(require('webpack-dev-middleware')(compiler, serverOptions));
 app.use(require('webpack-hot-middleware')(compiler));
-/* app.get('*', middleware);
- * app.use(express.static(path.resolve(rootDir, 'src'))); */
 
 app.listen(webpackPort, (err) => {
   if(err) {

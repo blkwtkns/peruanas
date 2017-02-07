@@ -1,7 +1,7 @@
 {
   "name": "raicesPeruanas",
   "version": "0.1.0",
-  "main": "src/index.js",
+  "main": "src/client.js",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.15",
     "eslint": "^3.1.1",
