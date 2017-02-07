@@ -7,8 +7,7 @@ export default class Raices extends Component {
   render() {
     const { assets, component, state } = this.props;
     const content = component ? ReactDOMServer.renderToString(component) : '';
-
-          /* <link rel="icon" type="image/png" sizes="16x16" href={icon}/> */
+    /* const background = require('../assets/machu-picchu-inca-peru.jpeg') */
 
     return (
       <html lang="en">
@@ -25,6 +24,7 @@ export default class Raices extends Component {
 
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css"/>
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css"/>
+
 
           {/* production */}
           {Object.keys(assets.styles).map((style, key) =>
@@ -58,8 +58,6 @@ export default class Raices extends Component {
             {Object.keys(assets.javascript).map((script, i) =>
               <script src={assets.javascript[script]} key={i}/>
             )}
-            charSet="UTF-8"
-          />
           <script src="https://use.fontawesome.com/e076ed21e5.js"/>
         </body>
       </html>

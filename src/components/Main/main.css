@@ -2,6 +2,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: url('../../assets/machu-picchu-inca-peru.jpeg');
+}
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+/* @import '../../assets/machu-picchu-inca-peru.jpeg'; */
+
+.jumbotron {
+  text-align: -webkit-center;
+  background-color: rgba(255, 255, 255, 0);
+  margin: 7rem auto;
+  padding: 0 0;
 }
 
 /* About.css */
@@ -43,58 +54,28 @@ body {
   text-align: center;
 }
 
-/* Dancers.css */
-.Dancers {
-  background-color: #ffffff;
-}
-
 .main {
   text-align: center;
 }
 
-/* DancersCarousel.css */
-.DancersCarousel {
-  margin-top: 3rem;
-}
+/* Carousels */
 
-.carousel-inner > .item > img {
-  width: 100%;
-  height: 700px;
+@media only screen and (min-width: 768px) {
+  .ImageCarousel {
+    width: 80%;
+  }
+
+  .carousel-inner > .item > img {
+    width: 100%;
+    height: 500px; 
+  } 
 }
 
 @media only screen and (max-width: 768px) {
   .carousel-inner > .item > img {
-    width: 100%;
-    height: 400px;
-  } 
-}
-
-/* Dances.css */
-.dances {
-  background-color: #ffffff;
-  margin: 3rem auto;
-}
-
-/* HistCarousel.css */
-.HistCarousel {
-  margin-top: 3rem;
-}
-
-.carousel-inner > .item > img {
-  width: 100%;
-  height: 700px;
-}
-
-@media only screen and (max-width: 768px) {
-  .carousel-inner > .item > img {
-    width: 100%;
-    height: 400px;
-  } 
-}
-
-/* History.css */
-.History {
-  background-color: #ffffff;
+    /* width: 100%; */
+    height: 300px;
+  }  
 }
 
 @media only screen and (min-width: 768px) {
@@ -102,28 +83,6 @@ body {
     text-align: center;
     margin: 0 15rem;
   }
-}
-
-/* Home.css */
-.home {
-  background-color: #ffffff;
-}
-
-/* HomeCarousel.css */
-.HomeCarousel {
-  margin-top: 3rem;
-}
-
-.carousel-inner > .item > img {
-  width: 100%;
-  height: 700px;
-}
-
-@media only screen and (max-width: 768px) {
-  .carousel-inner > .item > img {
-    width: 100%;
-    height: 400px;
-  } 
 }
 
 /* @media only screen and (min-width: 768px) {
@@ -134,8 +93,6 @@ body {
  * } */
 
 /* Main.css */
-@import url(//fonts.googleapis.com/css?family=Open+Sans);
-
 a {
   text-decoration: none;
 }
@@ -198,7 +155,6 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-
   .links {
     display: initial;
   }
@@ -230,35 +186,9 @@ a {
   bottom: 0;
 }
 
-
 @media only screen and (min-width: 768px) {
   .footer {
     margin-top: 0 2em 0 2em;
   }
 }
 
-/* Photo.css */
-.History {
-  background-color: #ffffff;
-}
-
-.main {
-  text-align: center;
-}
-
-/* PhotosCarousel.css */
-.PhotosCarousel {
-  margin-top: 3rem;
-}
-
-.carousel-inner > .item > img {
-  width: 100%;
-  height: 700px;
-}
-
-@media only screen and (max-width: 768px) {
-  .carousel-inner > .item > img {
-    width: 100%;
-    height: 400px;
-  } 
-}
