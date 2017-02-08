@@ -15,7 +15,7 @@ const Main = (props) => {
   return (
     <section>
       <Header />
-      <div className="container-fluid">
+      <div className="main-container">
         { props.children }
       </div>
       <Footer />

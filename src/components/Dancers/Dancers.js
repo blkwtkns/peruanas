@@ -6,12 +6,7 @@ import ImageCarousel from '../ImageCarousel';
 import { dancers } from '../../constants/photoState';
 
 
-const Dancers = (props) => (
-
-  <Jumbotron className="Dancers">
-    <ImageCarousel clName={'DancersCarousel'} images={dancers}/>
-  </Jumbotron>
-      
+export default (props) => (
+    <ImageCarousel images={dancers}/>
 );
 
-export default Dancers;

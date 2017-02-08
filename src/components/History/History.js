@@ -6,10 +6,8 @@ import { history } from '../../constants/photoState';
 
 const History = (props) => (
 
-    <section className="historySection">
-    <Jumbotron className="History"> 
-      <ImageCarousel clName={'HistCarousel'} images={history}/>
-    </Jumbotron>
+  <section className="historySection">
+    <ImageCarousel images={history}/>
     <div className="supporting">
       <div className="containter-fluid">
         <div className="main">
@@ -27,7 +25,7 @@ const History = (props) => (
         </div>
       </div>
     </div>
-    </section>
+  </section>
 );
 
 export default History;

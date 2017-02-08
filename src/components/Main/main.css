@@ -1,25 +1,51 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+/* @import '../../assets/machu-picchu-inca-peru.jpeg'; */
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: url('../../assets/machu-picchu-inca-peru.jpeg');
+  /* background: no-repeat url('../../assets/Machu_Picchu_Clouds_2.jpg'); */
 }
-
-@import url(//fonts.googleapis.com/css?family=Open+Sans);
-/* @import '../../assets/machu-picchu-inca-peru.jpeg'; */
 
 .jumbotron {
   text-align: -webkit-center;
   background-color: rgba(255, 255, 255, 0);
-  margin: 7rem auto;
   padding: 0 0;
+  margin: 5% 15%;;
+}
+
+.Intro {
+  padding: 30% 0;
+  height: 80em;
+  background: no-repeat top center url('../../assets/machu-picchu-inca-peru.jpeg');
+}
+
+.introText {
+  margin: 0 auto;
+  height: 50%;
+  color: floralwhite;
+}
+
+.jumboCarousel {
+  padding: 5% 0;
+  height: 80em;
+  background: black;
+}
+
+.photos {
+  margin-bottom: 1%;
+  padding: 5% 0;
+  height: 182em;
+  background: black;
 }
 
 /* About.css */
 .supporting {
+  /* width: 100%; */
   text-align: center;
   background-color: #ffffff;
-  border: thin solid grey;
+  /* border: thin solid grey; */
 }
 
 .supporting > .mainAbout, .raicesAbout {
@@ -29,8 +55,15 @@ body {
 
 @media only screen and (min-width: 768px) {
   .supporting {
-    margin: 0 15rem;
+    /* margin: 0 15rem; */
   }
+}
+
+/* Dances.css */
+.dances {
+  background: black;
+  height: 80em;
+  padding: 10% 0;
 }
 
 /* Contact.css */
@@ -62,7 +95,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .ImageCarousel {
-    width: 80%;
+    /* width: 80%; */
   }
 
   .carousel-inner > .item > img {
@@ -98,7 +131,7 @@ a {
 }
 
 .navMain {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0);
 }
 
 .fa-2x {

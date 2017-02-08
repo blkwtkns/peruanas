@@ -8,11 +8,13 @@ import Gallery from '../GridGallery';
 
 const Photos = (props) => (
 
-  <Jumbotron className="Dancers">
-    <Gallery clName={'PhotoGallery'} images={photos} />
-    {/* <ImageCarousel clName={'PhotosCarousel'} images={photos} /> */}
-  </Jumbotron>
-      
+  <div className='photos'>
+    <Jumbotron>
+      <Gallery clName={'PhotoGallery'} images={photos} />
+      {/* <ImageCarousel clName={'PhotosCarousel'} images={photos} /> */}
+    </Jumbotron>
+  </div>
+
 );
 
 export default Photos;
