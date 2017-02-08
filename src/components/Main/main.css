@@ -11,7 +11,8 @@ body {
 .jumbotron {
   text-align: -webkit-center;
   background-color: rgba(255, 255, 255, 0);
-  padding: 0 0;
+  /* padding: 0 0; */
+  padding: 15% 0;
   margin: 5% 15%;;
 }
 

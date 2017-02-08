@@ -22,3 +22,11 @@
 
 * Something wrong with state or components updating, when changing around routes it gets stuck on one, especially the contact component, that complete halts navigation.
 
+* Toying around with image galleries, not all that satisfied. 
+
+* Mobile sizing needs to be looked at across the board.
+
+* Menu bar should not be translucent when in mobile or when scrolling/not top position
+
+* Replace news with presentations component
+
