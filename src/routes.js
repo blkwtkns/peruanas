@@ -3,7 +3,7 @@ import { Route } from 'react-router';
 
 import Main from './components/Main/Main';
 import Home from './components/Home/Home';
-import News from './components/News/News';
+import Presentations from './components/Presentations/Presentations';
 import History from './components/History/History';
 import Dances from './components/Dances/Dances';
 import Dancers from './components/Dancers/Dancers';
@@ -17,7 +17,7 @@ export default (store) => {
   return (
     <Route component={Main}>
       <Route path="/" component={Home}/>
-      <Route path="news" component={News}/>
+      <Route path="presentations" component={Presentations}/>
       <Route path="history" component={History} />
       <Route path="dances" component={Dances}/>
       <Route path="dancers" component={Dancers} />

@@ -9,7 +9,7 @@ const RouteLinks = (props) => {
 
   return (
     <div className="routeLinks">
-      <LinkContainer to="news"><NavItem eventKey={2} href="#">News</NavItem></LinkContainer>
+      <LinkContainer to="presentations"><NavItem eventKey={2} href="#">Presentations</NavItem></LinkContainer>
       <LinkContainer to="dances"><NavItem eventKey={3} href="#">Dances</NavItem></LinkContainer>
       <LinkContainer to="photos"><NavItem eventKey={4} href="#">Photos</NavItem></LinkContainer>
       <LinkContainer to="history"><NavItem eventKey={5} href="#">History</NavItem></LinkContainer>

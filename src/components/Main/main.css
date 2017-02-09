@@ -29,7 +29,7 @@ body {
 }
 
 .greyBox {
-  background: #7e7e7e;
+  background: #3f3f3f;
   opacity: 0.8;
   padding: 1% 0;
   margin-right: 10%;
@@ -42,9 +42,7 @@ body {
 }
 
 .photos {
-  margin-bottom: 1%;
-  padding: 5% 0;
-  height: 182em;
+  padding: 10% 0;
   background: black;
 }
 
@@ -95,8 +93,19 @@ body {
   text-align: center;
 }
 
-.main {
+.mainHistory {
   text-align: center;
+  padding: 10%;
+  text-align: center;
+}
+
+.engHistory {
+  background: #ffffff;
+}
+
+.espHistory {
+  background: black;
+  color: white;
 }
 
 /* Carousels */
@@ -139,7 +148,9 @@ a {
 }
 
 .navMain {
-  background: rgba(255, 255, 255, 0);
+  /* background: rgba(255, 255, 255, 0); */
+  background: #3f3f3f;
+  opacity: .8;
 }
 
 .fa-2x {
@@ -180,10 +191,19 @@ a {
 
 /* for mobile hamburger menu button */
 .navbar-default .navbar-toggle:hover {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
+  background-color: rgba(255, 255, 255, 0);
 }
 .navbar-default .navbar-toggle {
-  border-color: #ffffff;
+  /* border-color: #ffffff; */
+  border-color: rgba(255, 255, 255, 0);
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-collapse {
+    background: #3f3f3f;
+    opacity: .8;
+  }
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -223,6 +243,10 @@ a {
 }
 
 .footer {
+  background: #3f3f3f;
+  opacity: .8;
+  color: #ffffff;
+  padding: 3% 0;
   text-align: center;
   bottom: 0;
 }

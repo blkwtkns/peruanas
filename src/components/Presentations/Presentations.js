@@ -1,7 +1,7 @@
-// ./src/components/News.js
+// ./src/components/Presentations.js
 import React, { Component } from 'react';
 
-class News extends Component {
+class Presentations extends Component {
   render() {
     return (
       <div className="News">
@@ -13,4 +13,4 @@ class News extends Component {
   }
 }
 
-export default News;
+export default Presentations;
