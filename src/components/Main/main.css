@@ -13,11 +13,11 @@ body {
   background-color: rgba(255, 255, 255, 0);
   /* padding: 0 0; */
   padding: 15% 0;
-  margin: 5% 15%;;
+  margin: 5% 20%;
 }
 
 .Intro {
-  padding: 30% 0;
+  padding: 15% 0;
   height: 80em;
   background: no-repeat top center url('../../assets/machu-picchu-inca-peru.jpeg');
 }
@@ -28,8 +28,15 @@ body {
   color: floralwhite;
 }
 
+.greyBox {
+  background: #7e7e7e;
+  opacity: 0.8;
+  padding: 1% 0;
+  margin-right: 10%;
+}
+
 .jumboCarousel {
-  padding: 5% 0;
+  padding: 1% 0;
   height: 80em;
   background: black;
 }
