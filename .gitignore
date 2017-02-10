@@ -19,6 +19,7 @@ scratch.js
 public
 stats
 webpack-assets.json
+tags
 
 # ignore lambdas for now
 lambdas
