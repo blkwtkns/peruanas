@@ -1,16 +1,18 @@
 // ./src/components/Presentations.js
-import React, { Component } from 'react';
+import React from 'react';
+import Event from './Event';
+import info from '../../constants/presentationInfo';
 
-class Presentations extends Component {
-  render() {
-    return (
-      <div className="News">
-        <p className="News-intro">
-          To get started, edit <code>src/News.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+// added header portion
+export default (props) => {
+  return (
+    <div className="container">
+      { 
+        info.performances.map((el, idx) => {
+          return <Event info={el} key={idx} />
+        })
+      }
+    </div>
+  );
 }
 
-export default Presentations;

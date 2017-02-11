@@ -257,3 +257,11 @@ a {
   }
 }
 
+.event {
+  margin: 5%;
+  color: #ffffff;
+  text-align: center;
+  background: #3f3f3f;
+  padding: 5% 15%;
+}
+
