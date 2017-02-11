@@ -12,19 +12,19 @@ const Photos = (props) => {
       {/* <Jumbotron> */}
         <div className='container'>
           <PageHeader> Photos Peruanos </PageHeader>
-        <Gallery className={'PhotoGallery'} 
-          images={photos.map(pic => {
-            return {
-              src: pic,
-              thumbnail: pic,
-              thumbnailWidth: 320,
-              thumbnailHeight: 212,
-            }
-          })} 
-        />
-      </div>
+          <Gallery className={'PhotoGallery'} 
+            images={photos.map(pic => {
+              return {
+                src: pic,
+                thumbnail: pic,
+                thumbnailWidth: 320,
+                thumbnailHeight: 212,
+              }
+            })} 
+          />
+        </div>
         {/* <ImageCarousel clName={'PhotosCarousel'} images={photos} /> */}
-      {/* </Jumbotron> */}
+        {/* </Jumbotron> */}
     </div>
 
   );

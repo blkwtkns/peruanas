@@ -1,11 +1,11 @@
+// ./src/components/Main/RouteLinks.js
 import React from 'react';
 import {
   NavItem,
 } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-/* class Header extends Component { */
-const RouteLinks = (props) => {
+export default (props) => {
 
   return (
     <div className="routeLinks">
@@ -18,5 +18,3 @@ const RouteLinks = (props) => {
     </div>
   )
 };
-
-export default RouteLinks;

@@ -1,7 +1,7 @@
-// ./src/Main/SocialLinks.js
+// ./src/components/Main/SocialLinks.js
 import React from 'react';
 
-const SocialLinks = (props) => {
+export default (props) => {
   return (
     <div className="socialLinks">
       <a className="fa fa-phone fa-2x socials" href="tel:6266640944"></a>
@@ -12,5 +12,3 @@ const SocialLinks = (props) => {
     </div>
   );
 };
-
-export default SocialLinks;

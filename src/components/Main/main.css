@@ -18,8 +18,26 @@ body {
 
 .Intro {
   padding: 15% 0;
-  height: 80em;
+  height: 87em;
   background: no-repeat top center url('../../assets/machu-picchu-inca-peru.jpeg');
+}
+
+.jumboCarousel {
+  padding: 1% 0;
+  height: 87em;
+  background: black;
+}
+
+@media only screen and (max-width: 768px) {
+  .Intro {
+    padding: 80% 0;
+    height: 53em;
+  }  
+
+  .jumboCarousel {
+    padding: 30% 0;
+    height: 53em;
+  }
 }
 
 .introText {
@@ -35,11 +53,7 @@ body {
   margin-right: 10%;
 }
 
-.jumboCarousel {
-  padding: 1% 0;
-  height: 80em;
-  background: black;
-}
+
 
 .photos {
   padding: 10% 0;
@@ -56,13 +70,6 @@ body {
 
 .supporting > .mainAbout, .raicesAbout {
   color: red;
-}
-
-
-@media only screen and (min-width: 768px) {
-  .supporting {
-    /* margin: 0 15rem; */
-  }
 }
 
 /* Dances.css */
@@ -258,10 +265,14 @@ a {
 }
 
 .event {
-  margin: 5%;
+  margin: 3% 0;
   color: #ffffff;
+  opacity: .9;
   text-align: center;
   background: #3f3f3f;
-  padding: 5% 15%;
+  padding: 1% 15%;
 }
 
+.Presentations {
+  padding: 10% 0;
+}

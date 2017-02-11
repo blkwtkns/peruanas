@@ -1,7 +1,5 @@
-// ./src/Main/Header.js
-import React, {
-  Component 
-} from 'react';
+// ./src/components/Main/Header.js
+import React from 'react';
 import {
   Navbar,
   Nav
@@ -10,12 +8,9 @@ import NavBrand from './NavBrand';
 import RouteLinks from './RouteLinks';
 import SocialLinks from './SocialLinks';
 
-/* class Header extends Component {
- *   render(){ */
-
-const Header = (props) => {
+export default (props) => {
   return (
-    <Navbar fluid fixedTop collapseOnSelect className="navMain">
+    <Navbar fluid fixedTop className="navMain" collapseOnSelect>
       <NavBrand />
       <Navbar.Collapse>
         <Nav pullRight className="links">
@@ -26,5 +21,3 @@ const Header = (props) => {
     </Navbar>
   );
 };
-
-export default Header;

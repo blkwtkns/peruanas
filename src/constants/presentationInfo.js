@@ -21,7 +21,7 @@ export default {
 
     },
     {
-      date: "September 17th , 2016 - Privado", 
+      date: "September 17th, 2016 - Privado", 
       location: "The Anaheim Hills Golf Course Clubhouse",
       about: null,
       time: null,

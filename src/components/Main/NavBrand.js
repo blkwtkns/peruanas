@@ -6,11 +6,8 @@ import {
 import { LinkContainer } from 'react-router-bootstrap';
 import { logos } from '../../constants/photoState';
 
-/* const logo = require('../assets/image1-small-23.png');  */
 
-/* class Header extends Component { */
-const NavBrand = (props) => {
-
+export default (props) => {
   return (
     <Navbar.Header>
       <Navbar.Brand>
@@ -25,5 +22,3 @@ const NavBrand = (props) => {
     </Navbar.Header>
   )
 };
-
-export default NavBrand;
