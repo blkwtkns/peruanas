@@ -12,7 +12,7 @@ body {
   text-align: -webkit-center;
   background-color: rgba(255, 255, 255, 0);
   /* padding: 0 0; */
-  padding: 15% 0;
+  /* padding: 15% 0; */
   margin: 5% 20%;
 }
 
@@ -31,12 +31,12 @@ body {
 @media only screen and (max-width: 768px) {
   .Intro {
     padding: 80% 0;
-    height: 53em;
+    height: 62em;
   }  
 
   .jumboCarousel {
     padding: 30% 0;
-    height: 53em;
+    height: 62em;
   }
 }
 
@@ -52,8 +52,6 @@ body {
   padding: 1% 0;
   margin-right: 10%;
 }
-
-
 
 .photos {
   padding: 10% 0;
@@ -80,6 +78,12 @@ body {
 }
 
 /* Contact.css */
+@media only screen and (max-width: 768px) {
+  .Contact {
+    padding: 0 5%;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .Contact {
     margin: 15rem;
@@ -116,6 +120,9 @@ body {
 }
 
 /* Carousels */
+.ImageCarousel {
+  padding: 18% 0;
+}
 
 @media only screen and (min-width: 768px) {
   .ImageCarousel {
