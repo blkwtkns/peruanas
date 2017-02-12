@@ -4,7 +4,7 @@ import { Jumbotron } from 'react-bootstrap';
 
 
 const About = () => (
-  <div className="supporting">
+  <div className="About">
     <div className="jumbotron">
       <h1 className='mainAbout'>Peruvian Events in Los Angeles
         Promoting Music and Dances from Peru</h1>

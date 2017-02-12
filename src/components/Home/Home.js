@@ -5,6 +5,7 @@ import About from './About';
 import { images } from '../../constants/photoState';
 import ImageCarousel from '../ImageCarousel';
 import Intro from './Intro';
+import Separator from '../SepComponent';
 /* import Gallery from '../LightGallery'; */
 /* import Gallery from '../GridGallery'; */
 
@@ -13,6 +14,7 @@ const Home = (props) => (
       <Intro />
        <ImageCarousel clName={'ImageCarousel'} images={ images }/>
       {/* <Gallery clName={'HomeGallery'} images={images} /> */}
+      <Separator clName={'aboutSeparator'} />
       <About />
   </section>
 );
