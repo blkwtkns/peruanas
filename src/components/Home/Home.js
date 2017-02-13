@@ -12,7 +12,7 @@ import Separator from '../SepComponent';
 const Home = (props) => (
   <section>
       <Intro />
-       <ImageCarousel clName={'ImageCarousel'} images={ images }/>
+       <ImageCarousel clName={'HomeCarousel'} images={ images }/>
       {/* <Gallery clName={'HomeGallery'} images={images} /> */}
       <Separator clName={'aboutSeparator'} />
       <About />

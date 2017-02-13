@@ -1,10 +1,11 @@
 // ./src/components/EngHistory.js
 import React from 'react';
-import { Jumbotron } from 'react-bootstrap';
+import { Jumbotron, PageHeader } from 'react-bootstrap';
 
 export default (props) => (
   <Jumbotron className="mainHistory engHistory">
-    <h1 className='historyTitleEng'>Raíces Peruanas of Los Angeles - History</h1>
+    <PageHeader> History </PageHeader>
+    <h1 className='historyTitleEng'>Raíces Peruanas of Los Angeles</h1>
     <h6 className='historyCaption'>(Spanish Version at the bottom)</h6>
     <p>It was the love for the land of our birthplace and unsettled sentiments of continuance that filled our hearts when leaving our land for this land of greater opportunities, and which motivated our spirit to put together our popular customs, songs, music and traditional folkloric dances of our beloved Peru in far South America. Once done, we then assumed the great challenge to disseminate our culture through the execution of this blend of dances, music and culture.</p>
     <p>In 1989, the Espejo sisters Doris and Jeanine, who where then 6 and 4 years old, began to learn and practice the Peruvian dances under the direction of their dance teacher and choreographer Rosagna Sanchez during the first 8 years. Now, years later, Jeanine continues to learn and perform the native dances with enthusiasm and enjoyment. In 1995, Raices Peruanas grew stronger when Margott Hinostroza, Maria Luisa Alvarado, Julie Shimabuco, Maria Lilet Burmester, Walter Almora, Edwin Delgado, Jose Elorrieta, and Henry Aquije, became members and the pioneers of this dance group.</p>

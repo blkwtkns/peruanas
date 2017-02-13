@@ -3,7 +3,7 @@ import { Jumbotron, Carousel, Image } from 'react-bootstrap';
 
 const ImageCarousel = (props) => {
   return (
-    <div className='jumboCarousel'>
+    <div className={'jumboCarousel ' + props.clName}>
       <Jumbotron>
       <Carousel className={'ImageCarousel'}>
 

@@ -1,6 +1,6 @@
 // ./src/components/History.js
 import React from 'react';
-import { Jumbotron, PageHeader } from 'react-bootstrap';
+import { Jumbotron } from 'react-bootstrap';
 import ImageCarousel from '../ImageCarousel';
 import { history } from '../../constants/photoState';
 import EngHistory from './EngHistory';
@@ -11,7 +11,7 @@ export default (props) => (
   <section className="historySection">
     <EngHistory />
     <Separator />
-    <ImageCarousel images={history}/>
+    <ImageCarousel clName={'HistoryCarousel'} images={history}/>
     <Separator />
     <EspHistory />
   </section>
