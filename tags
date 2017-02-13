@@ -3,28 +3,29 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-assets	src/layouts/HTML.js	/^Raices.propTypes = {$/;"	p	class:Raices.propTypes
-assets	webpack/webpack-isomorphic-tools.js	/^  webpack_stats_file_path  : '.\/stats\/webpack-stats.json',$/;"	p	class:module.exports
-case	public/assets/main-c95cd6fee84426b87b90.js	/^!function(e){function t(r){if(n[r])return n[r].exports;var o=n[r]={exports:{},id:r,loaded:!1};return e[r].call(o.exports,o,o.exports,t),o.loaded=!0,o.exports}var n={};return t.m=e,t.c=n,t.p="\/assets\/",t(0)}(function(e){for(var t in e)if(Object.prototype.hasOwnProperty.call(e,t))switch(typeof e[t]){case"function":break;case"object":e[t]=function(t){var n=t.slice(1),r=e[t[0]];return function(e,t,o){r.apply(this,[e,t,o].concat(n))}}(e[t]);break;default:e[t]=e[e[t]]}return e}([function(e,t,n){e.exports=n(280)},function(e,t,n){"use strict";e.exports=n(31)},function(e,t){"use strict";t.__esModule=!0,t.default=function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var o=n(311),a=r(o),i=n(309),u=r(i),s=n(101),l=r(s);t.default=function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+("undefined"==typeof t?"undefined":(0,l.default)(t)));e.prototype=(0,u.default)(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(a.default?(0,a.default)(e,t):e.__proto__=t)}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var o=n(101),a=r(o);t.default=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!==("undefined"==typeof t?"undefined":(0,a.default)(t))&&"function"!=typeof t?e:t}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var o=n(163),a=r(o);t.default=a.default||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}},function(e,t){"use strict";t.__esModule=!0,t.default=function(e,t){var n={};for(var r in e)t.indexOf(r)>=0||Object.prototype.hasOwnProperty.call(e,r)&&(n[r]=e[r]);return n}},function(e,t,n){var r,o;\/*!$/;"	f
-context	webpack/webpack.config.dev.js	/^  devtool: 'inline-source-map',$/;"	p	class:module.exports
-context	webpack/webpack.config.prod.js	/^  devtool: 'source-map',$/;"	p	class:module.exports
-currentImage	src/components/LightGallery.js	/^			lightboxIsOpen: false,$/;"	p	class:state
-devtool	webpack/webpack.config.dev.js	/^module.exports = {$/;"	p	class:module.exports
-devtool	webpack/webpack.config.prod.js	/^module.exports = {$/;"	p	class:module.exports
-heading	src/components/LightGallery.js	/^Gallery.propTypes = {$/;"	p	class:Gallery.propTypes
-hot	bin/dev-server.js	/^  noInfo: true,$/;"	p	class:const
-inline	bin/dev-server.js	/^  hot: true,$/;"	p	class:const
-large	src/components/LightGallery.js	/^	small: 2,$/;"	p	class:const
-lazy	bin/dev-server.js	/^  inline: true,$/;"	p	class:const
-lightboxIsOpen	src/components/LightGallery.js	/^		this.state = {$/;"	p	class:state
-n	public/assets/main-c95cd6fee84426b87b90.js	/^!function(e){function t(r){if(n[r])return n[r].exports;var o=n[r]={exports:{},id:r,loaded:!1};return e[r].call(o.exports,o,o.exports,t),o.loaded=!0,o.exports}var n={};return t.m=e,t.c=n,t.p="\/assets\/",t(0)}(function(e){for(var t in e)if(Object.prototype.hasOwnProperty.call(e,t))switch(typeof e[t]){case"function":break;case"object":e[t]=function(t){var n=t.slice(1),r=e[t[0]];return function(e,t,o){r.apply(this,[e,t,o].concat(n))}}(e[t]);break;default:e[t]=e[e[t]]}return e}([function(e,t,n){e.exports=n(280)},function(e,t,n){"use strict";e.exports=n(31)},function(e,t){"use strict";t.__esModule=!0,t.default=function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var o=n(311),a=r(o),i=n(309),u=r(i),s=n(101),l=r(s);t.default=function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+("undefined"==typeof t?"undefined":(0,l.default)(t)));e.prototype=(0,u.default)(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(a.default?(0,a.default)(e,t):e.__proto__=t)}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var o=n(101),a=r(o);t.default=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!==("undefined"==typeof t?"undefined":(0,a.default)(t))&&"function"!=typeof t?e:t}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var o=n(163),a=r(o);t.default=a.default||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}},function(e,t){"use strict";t.__esModule=!0,t.default=function(e,t){var n={};for(var r in e)t.indexOf(r)>=0||Object.prototype.hasOwnProperty.call(e,r)&&(n[r]=e[r]);return n}},function(e,t,n){var r,o;\/*!$/;"	v
-name	src/components/Contact/Contact.js	/^    const input = {$/;"	p	class:const
-noInfo	bin/dev-server.js	/^  noInfo: true,$/;"	p	class:const
-noInfo	bin/dev-server.js	/^  quiet: true,$/;"	p	class:const
-port	config/env.js	/^module.exports = {$/;"	p	class:module.exports
-publicPath	bin/dev-server.js	/^  lazy: false,$/;"	p	class:const
-quiet	bin/dev-server.js	/^const serverOptions = {$/;"	p	class:const
-small	src/components/LightGallery.js	/^const gutter = {$/;"	p	class:const
-webpack_assets_file_path	webpack/webpack-isomorphic-tools.js	/^module.exports = {$/;"	p	class:module.exports
-webpack_stats_file_path	webpack/webpack-isomorphic-tools.js	/^  webpack_assets_file_path : '.\/stats\/webpack-assets.json',$/;"	p	class:module.exports
+!_TAG_PROGRAM_VERSION	5.8	//
+Gallery.propTypes.heading	src/components/LightGallery.js	/^	heading: PropTypes.string,$/;"	p
+Raices.propTypes.assets	src/layouts/HTML.js	/^  assets: React.PropTypes.object,$/;"	p
+case	public/assets/main-9775856aea69a0bb38c0.js	/^!function(e){function t(r){if(n[r])return n[r].exports;var o=n[r]={exports:{},id:r,loaded:!1};return e[r].call(o.exports,o,o.exports,t),o.loaded=!0,o.exports}var n={};return t.m=e,t.c=n,t.p="\/assets\/",t(0)}(function(e){for(var t in e)if(Object.prototype.hasOwnProperty.call(e,t))switch(typeof e[t]){case"function":break;case"object":e[t]=function(t){var n=t.slice(1),r=e[t[0]];return function(e,t,o){r.apply(this,[e,t,o].concat(n))}}(e[t]);break;default:e[t]=e[e[t]]}return e}([function(e,t,n){e.exports=n(262)},function(e,t,n){"use strict";e.exports=n(55)},function(e,t){"use strict";t.__esModule=!0,t.default=function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var o=n(292),a=r(o),i=n(290),u=r(i),s=n(96),l=r(s);t.default=function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+("undefined"==typeof t?"undefined":(0,l.default)(t)));e.prototype=(0,u.default)(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(a.default?(0,a.default)(e,t):e.__proto__=t)}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var o=n(96),a=r(o);t.default=function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!==("undefined"==typeof t?"undefined":(0,a.default)(t))&&"function"!=typeof t?e:t}},function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var o=n(156),a=r(o);t.default=a.default||function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e}},function(e,t){"use strict";t.__esModule=!0,t.default=function(e,t){var n={};for(var r in e)t.indexOf(r)>=0||Object.prototype.hasOwnProperty.call(e,r)&&(n[r]=e[r]);return n}},function(e,t,n){var r,o;\/*!$/;"	f
+console.log.handle	lambdas/functions/hello/index.js	/^console.log('starting function')$/;"	f
+const.hot	bin/dev-server.js	/^  hot: true,$/;"	p
+const.inline	bin/dev-server.js	/^  inline: true,$/;"	p
+const.large	src/components/LightGallery.js	/^	large: 4,$/;"	p
+const.lazy	bin/dev-server.js	/^  lazy: false,$/;"	p
+const.name	src/components/Contact/Contact.js	/^      name: this.nameInput.value,$/;"	p
+const.noInfo	bin/dev-server.js	/^  noInfo: true,$/;"	p
+const.publicPath	bin/dev-server.js	/^  publicPath: config.output.publicPath,$/;"	p
+const.quiet	bin/dev-server.js	/^  quiet: true,$/;"	p
+const.small	src/components/LightGallery.js	/^	small: 2,$/;"	p
+exports.handle	lambdas/functions/guestbookWrite/index.js	/^exports.handle = function(e, ctx, callback) {$/;"	f
+exports.handle.params.Item	lambdas/functions/guestbookWrite/index.js	/^    Item: {$/;"	p
+module.exports.assets	webpack/webpack-isomorphic-tools.js	/^  assets: {$/;"	p
+module.exports.context	webpack/webpack.config.dev.js	/^  context: path.resolve(__dirname, '..'),$/;"	p
+module.exports.context	webpack/webpack.config.prod.js	/^  context: path.resolve(__dirname, '..'),$/;"	p
+module.exports.devtool	webpack/webpack.config.dev.js	/^  devtool: 'inline-source-map',$/;"	p
+module.exports.devtool	webpack/webpack.config.prod.js	/^  devtool: 'source-map',$/;"	p
+module.exports.port	config/env.js	/^  port: process.env.PORT || 3000,$/;"	p
+module.exports.webpack_assets_file_path	webpack/webpack-isomorphic-tools.js	/^  webpack_assets_file_path : '.\/stats\/webpack-assets.json',$/;"	p
+module.exports.webpack_stats_file_path	webpack/webpack-isomorphic-tools.js	/^  webpack_stats_file_path  : '.\/stats\/webpack-stats.json',$/;"	p
+state.currentImage	src/components/LightGallery.js	/^			currentImage: 0,$/;"	p
+state.lightboxIsOpen	src/components/LightGallery.js	/^			lightboxIsOpen: false,$/;"	p
