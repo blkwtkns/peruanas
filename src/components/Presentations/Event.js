@@ -1,4 +1,4 @@
-// ./src/components/Events.js
+// ./src/components/Presentations/Events.js
 import React from 'react';
 
 export default (props) => {

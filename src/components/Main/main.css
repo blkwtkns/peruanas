@@ -72,8 +72,9 @@ body {
 
 .separator {
   height: 2px;
-  width: 90%;
+  width: 60%;
   background: red;
+  margin: 0 auto;
 }
 
 /* Dances.css */
@@ -289,13 +290,16 @@ a {
 
 .event {
   margin: 3% 0;
-  color: #ffffff;
-  opacity: .9;
-  text-align: center;
-  background: #3f3f3f;
-  padding: 1% 15%;
+  color: black;
+  background: #ffffff;
+  padding: 1% 0;
 }
 
 .Presentations {
   padding: 10% 0;
+}
+
+.Presentations.container {
+  text-align: center;
+  padding: 0 15%;
 }

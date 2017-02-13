@@ -1,7 +1,8 @@
-// ./src/components/Presentations.js
+// ./src/components/Presentations/Presentations.js
 import React from 'react';
 import Event from './Event';
 import { PageHeader } from 'react-bootstrap';
+import Separator from '../SepComponent';
 import info from '../../constants/presentationInfo';
 
 // added header portion
@@ -12,8 +13,9 @@ export default (props) => {
 
         <PageHeader> Presentations </PageHeader>
         { 
-          info.performances.map((el, idx) => {
-            return <Event info={el} key={idx} />
+          info.performances.map((el, idx, arr) => {
+            let item = idx === arr.length - 1 ? <Event info={el} key={idx} /> : [<Event info={el} key={idx} />, <Separator />];
+              return item;
           })
         }
       </div>
