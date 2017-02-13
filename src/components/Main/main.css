@@ -291,6 +291,7 @@ a {
 .event {
   margin: 3% 0;
   color: black;
+  text-align: center;
   background: #ffffff;
   padding: 1% 0;
 }
@@ -300,6 +301,5 @@ a {
 }
 
 .Presentations.container {
-  text-align: center;
   padding: 0 15%;
 }

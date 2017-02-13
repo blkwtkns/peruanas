@@ -14,8 +14,7 @@ export default (props) => {
         <PageHeader> Presentations </PageHeader>
         { 
           info.performances.map((el, idx, arr) => {
-            let item = idx === arr.length - 1 ? <Event info={el} key={idx} /> : [<Event info={el} key={idx} />, <Separator />];
-              return item;
+            return idx === arr.length - 1 ? <Event info={el} key={idx} /> : [<Event info={el} key={idx} />, <Separator />];
           })
         }
       </div>
