@@ -34,3 +34,7 @@
 Valicha, Huaylarsh, Festejo (Lando y Alcatraz), Marinera Nortena, marinera limena, tondero, carnaval de qatqa, carnaval de imilla muniri, pacasito, umapata, tuntuna, selva, abancay, El vals criollo, zamacueca
 
 * Add map with corresponding regions that dances are from
+
+* Mailgun mostly setup (ready for testing)
+
+* Setup more thorough validation
