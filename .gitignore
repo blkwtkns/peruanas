@@ -11,15 +11,16 @@ build
 dist
 
 # misc
+reactREADME.md
 .DS_Store
 .env
 npm-debug.log
 src/assets
-scratch.js
 public
 stats
 webpack-assets.json
 tags
+mailgunInfo.txt
 
 # ignore lambdas for now
 lambdas
