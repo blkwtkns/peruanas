@@ -23,9 +23,8 @@ tags
 mailgunInfo.txt
 
 # ignore lambdas for now
-lambdas
-!lambdas/functions/guestbookWrite
-!lambdas/functions/guestbookWrite/*
+# !lambdas/functions/guestbookWrite/*
+lambdas/* !lambdas/functions/guestbookWrite
 
 # ignore top secret urls
 src/secrets
