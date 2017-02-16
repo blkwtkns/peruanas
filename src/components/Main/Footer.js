@@ -1,7 +1,8 @@
 // ./src/Main/Footer.js
 import React from 'react';
 
-const Footer = (props) => (
+
+export default (props) => (
   <footer className="footer">
     <div className="containter">
       <p>RaicesPeruanas.com © Copyright 2004 -2013</p>
@@ -11,4 +12,3 @@ const Footer = (props) => (
   </footer>
 );
 
-export default Footer;

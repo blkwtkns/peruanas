@@ -1,5 +1,12 @@
 export default {
-  performances: [
+  default:[{
+      date: "TBD",
+      location: "",
+      about: "",
+      time: ""
+    }],
+  upcomingPerformances: [],
+  pastPerformances: [
     {
       date: "October 13, 2016",
       location: "The Cotsen Institute of Archaelogy at UCLA",

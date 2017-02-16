@@ -11,9 +11,16 @@ export default (props) => {
     <div className="Presentations">
       <div className="container">
 
-        <PageHeader> Presentations </PageHeader>
+        <PageHeader> Upcoming Presentations </PageHeader>
+        { !info.upcomingPerformances.length ? [<Event info={info.default[0]} key={1}/>] :
+          info.upcomingPerformances.map((el, idx, arr) => {
+            return idx === arr.length - 1 ? <Event info={el} key={idx} /> : [<Event info={el} key={idx} />, <Separator />];
+          })
+        }
+
+        <PageHeader> Past Presentations </PageHeader>
         { 
-          info.performances.map((el, idx, arr) => {
+          info.pastPerformances.map((el, idx, arr) => {
             return idx === arr.length - 1 ? <Event info={el} key={idx} /> : [<Event info={el} key={idx} />, <Separator />];
           })
         }
