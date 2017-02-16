@@ -9,14 +9,12 @@ import Separator from '../SepComponent';
 /* import Gallery from '../LightGallery'; */
 /* import Gallery from '../GridGallery'; */
 
-const Home = (props) => (
+export default (props) => (
   <section className='homeSection'>
-      <Intro />
-       <ImageCarousel images={ images }/>
-      {/* <Gallery clName={'HomeGallery'} images={images} /> */}
-      <Separator clName={'aboutSeparator'} />
-      <About />
+    <Intro />
+    <ImageCarousel images={ images }/>
+    {/* <Gallery clName={'HomeGallery'} images={images} /> */}
+    <Separator clName={'aboutSeparator'} />
+    <About />
   </section>
 );
-
-export default Home;

@@ -17,7 +17,6 @@ body {
 /* } */
 
 .jumbotron {
-  padding: 0 15%;
   text-align: -webkit-center;
   background-color: rgba(255, 255, 255, 0);
 }
@@ -39,10 +38,6 @@ body {
     height: 47em;
   }
 
-  /* .DancersCarousel { */
-  /*   height: 39em; */
-  /* } */
-  
 }
 
 .introText {
@@ -110,7 +105,8 @@ body {
 
 @media only screen and (min-width: 768px) {
   .contactSection {
-    margin: 15rem;
+    /* margin: 0 20%; */
+    padding: 4% 10%;
   }
 }
 
@@ -146,13 +142,13 @@ body {
 
 /* Carousels */
 a.carousel-control.left, a.carousel-control.right {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0);
 }
 
 @media only screen and (min-width: 768px) {
-  /* .ImageCarousel { */
-  /*   padding: 0 20%; */
-  /* } */
+  .ImageCarousel {
+    padding: 5% 25%;
+  }
 
   .carousel-inner > .item > img {
     width: 100%;
@@ -166,9 +162,15 @@ a.carousel-control.left, a.carousel-control.right {
     height: 300px;
   }  
 
-  /* .ImageCarousel { */
-  /*   padding: 0 15%; */
-  /* } */
+  .ImageCarousel {
+    padding: 5% 15%;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .ImageCarousel {
+    padding: 5% 35%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -176,6 +178,11 @@ a.carousel-control.left, a.carousel-control.right {
     text-align: center;
     margin: 0 15rem;
   }
+}
+
+/* Dancers page */
+.dancers {
+  padding: 10% 0;
 }
 
 .dancers.page-header {
