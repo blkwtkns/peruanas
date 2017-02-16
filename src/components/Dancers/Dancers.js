@@ -7,9 +7,11 @@ import { dancers } from '../../constants/photoState';
 
 
 export default (props) => (
-  <div className='dancers'>
-    <PageHeader>Dancers of Raices Peruanas</PageHeader>
-    <ImageCarousel clName={'DancersCarousel'} images={dancers}/>
-  </div>
+  <section className='dancersSection'>
+    <Jumbotron className='dancers'>
+      <PageHeader>Dancers of Raices Peruanas</PageHeader>
+      <ImageCarousel images={dancers}/>
+    </Jumbotron>
+  </section>
 );
 

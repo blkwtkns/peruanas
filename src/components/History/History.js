@@ -11,7 +11,7 @@ export default (props) => (
   <section className="historySection">
     <EngHistory />
     <Separator />
-    <ImageCarousel clName={'HistoryCarousel'} images={history}/>
+    <ImageCarousel images={history}/>
     <Separator />
     <EspHistory />
   </section>

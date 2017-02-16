@@ -5,14 +5,14 @@ import { PageHeader } from 'react-bootstrap';
 import Separator from '../SepComponent';
 import info from '../../constants/presentationInfo';
 
-// added header portion
 export default (props) => {
   return (
-    <div className="Presentations">
+    <section className="presentationsSection">
       <div className="container">
 
         <PageHeader> Upcoming Presentations </PageHeader>
-        { !info.upcomingPerformances.length ? [<Event info={info.default[0]} key={1}/>] :
+        { 
+          !info.upcomingPerformances.length ? [<Event info={info.default[0]} key={1}/>] :
           info.upcomingPerformances.map((el, idx, arr) => {
             return idx === arr.length - 1 ? <Event info={el} key={idx} /> : [<Event info={el} key={idx} />, <Separator />];
           })
@@ -25,7 +25,7 @@ export default (props) => {
           })
         }
       </div>
-    </div>
+    </section>
   );
 }
 

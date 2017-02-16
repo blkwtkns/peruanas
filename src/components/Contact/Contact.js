@@ -41,7 +41,7 @@ class Contact extends Component {
     
 
     return (
-      <section className="Contact">
+      <section className="contactSection">
         <div className="reqHeadline">
           <h1>Please contact us and/or send us your info to request more info or book a performance.</h1>
         </div>

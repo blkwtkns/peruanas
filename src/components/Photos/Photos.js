@@ -5,11 +5,10 @@ import { PageHeader } from 'react-bootstrap';
 import { photos } from '../../constants/photoState';
 import Gallery from 'react-grid-gallery';
 
-const Photos = (props) => {
+export default (props) => {
 
   return (
-    <div className='photos'>
-      {/* <Jumbotron> */}
+    <section className='photosSection'>
         <div className='container'>
           <PageHeader> Photos Peruanos </PageHeader>
           <Gallery className={'PhotoGallery'} 
@@ -23,11 +22,7 @@ const Photos = (props) => {
             })} 
           />
         </div>
-        {/* <ImageCarousel clName={'PhotosCarousel'} images={photos} /> */}
-        {/* </Jumbotron> */}
-    </div>
+    </section>
 
   );
 }
-
-export default Photos;

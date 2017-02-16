@@ -10,9 +10,9 @@ import Separator from '../SepComponent';
 /* import Gallery from '../GridGallery'; */
 
 const Home = (props) => (
-  <section>
+  <section className='homeSection'>
       <Intro />
-       <ImageCarousel clName={'HomeCarousel'} images={ images }/>
+       <ImageCarousel images={ images }/>
       {/* <Gallery clName={'HomeGallery'} images={images} /> */}
       <Separator clName={'aboutSeparator'} />
       <About />
