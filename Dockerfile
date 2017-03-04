@@ -10,6 +10,8 @@ RUN mkdir -p /usr/src/app/public
 WORKDIR /usr/src/app
 
 COPY . /usr/src/app/
+
+RUN npm i -g webpack
 RUN npm install --production
 
 EXPOSE 3000
