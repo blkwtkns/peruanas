@@ -22,7 +22,7 @@ import routes from './routes';
 const doctype = '<!DOCTYPE html>'
 const app = express();
 
-app.use(favicons(path.join(__dirname, '..', 'public', 'favicon.ico')));
+app.use(favicons(path.join(__dirname, '..', 'raicesFavicons')));
 app.use('/', express.static(path.join(__dirname, '..', 'public')));
 
 app.use( (req, res) => {
