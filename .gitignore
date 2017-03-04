@@ -21,6 +21,7 @@ stats
 webpack-assets.json
 tags
 mailgunInfo.txt
+raicesFavicon
 
 # ignore lambdas for now
 lambdas/*.json
