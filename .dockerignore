@@ -1,0 +1,17 @@
+node_modules
+coverage
+build
+dist
+reactREADME.md
+.DS_Store
+npm-debug.log
+public
+stats
+webpack-assets.json
+tags
+mailgunInfo.txt
+lambdas
+.dockerignore
+Dockerfile
+.gitignore
+.git
