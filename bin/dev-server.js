@@ -1,6 +1,6 @@
 import express from 'express';
 import webpack from 'webpack';
-const { host, port, webpackPort } = require('../config/env');
+const { webpackPort } = require('../config/env');
 
 
 const config = require('../webpack/webpack.config.dev');
