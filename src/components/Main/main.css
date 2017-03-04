@@ -79,7 +79,8 @@ body {
 
 /* Dances.css */
 .dancesSection {
-  padding: 14% 10%;
+  padding: 5% 15%;
+  min-height: calc(86vh);
 }
 
 @media only screen and (max-width: 768px) {
@@ -97,6 +98,10 @@ body {
 
 
 /* Contact.css */
+.contactSection {
+  min-height: calc(86vh);
+}
+
 @media only screen and (max-width: 768px) {
   .contactSection {
     padding: 0 5%;
@@ -105,8 +110,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .contactSection {
-    /* margin: 0 20%; */
-    padding: 4% 10%;
+    padding: 4% 20%;
   }
 }
 
@@ -181,6 +185,10 @@ a.carousel-control.left, a.carousel-control.right {
 }
 
 /* Dancers page */
+.dancersSection {
+  min-height: calc(86vh);
+}
+
 .dancers {
   padding: 10% 0;
 }
