@@ -1,14 +1,14 @@
 version: '2'
 services:
   devapp:
-    build: ../Dockerfiles/devApp/
+    build: Dockerfiles/devApp/
     ports:
       - "3000:3000"
     volumes:
-      - ..:/usr/src/app
+      - .:/usr/src/app
   webpackapp:
-    build: ../Dockerfiles/devserverApp/
+    build: /Dockerfiles/devserverApp/
     ports:
       - "3002:3002"
     volumes:
-      - ..:/usr/src/app
+      - .:/usr/src/app
