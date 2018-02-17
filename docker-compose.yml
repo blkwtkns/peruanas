@@ -1,0 +1,49 @@
+version: '3'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: somewordpress
+       MYSQL_DATABASE: headless-press
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+
+   press:
+     depends_on:
+       - db
+     # image: wordpress:latest
+     build: press
+     ports:
+       - "8080:8080"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+
+   app:
+     build: app
+     ports:
+       - "3030:3030"
+     # env_file: 
+     #   - ./app/docker-env
+     restart: always
+     volumes:
+       - ./app:/home/app-user/app
+       - ./home/app-user/app/node_modules
+     environment:
+       APP_PORT: 3030
+       WORDPRESS_DB_HOST: db:3306
+       WORDPRESS_HOST: wordpress:8080
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+       MYSQL_USER: wordpress
+       MYSQL_PASSWORD: wordpress
+       depends_on:
+         - db
+volumes:
+    db_data:
