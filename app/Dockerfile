@@ -1,8 +1,5 @@
-# see: http://jdlm.info/articles/2016/03/06/lessons-building-node-app-docker.html
-
-# TODO: adding user screws up permissions right now
-# NB: Remember this is not a Debian environs
-FROM mhart/alpine-node:latest
+# FROM mhart/alpine-node:latest
+FROM node:latest
 
 # RUN useradd --user-group --create-home --shell /bin/false app-user
 
@@ -13,8 +10,7 @@ COPY package.json $HOME/app/
 
 # USER app-user
 WORKDIR $HOME/app
-# RUN npm install
-RUN yarn
-# RUN npm install gulp-cli -g
 
-CMD ["yarn", "serve"]
+RUN npm install
+
+CMD ["npm", "start-server"]
